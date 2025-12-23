@@ -28,8 +28,8 @@ export function SelectLanguage(props: Props) {
         <SelectValue placeholder="Language" />
       </SelectTrigger>
       <SelectContent>
-        <SelectItem value="pt">Português</SelectItem>
-        <SelectItem value="en">English</SelectItem>
+        <SelectItem value="pt">Português &#x1f1e7;&#x1f1f7;</SelectItem>
+        <SelectItem value="en">English &#x1F1FA;&#x1F1F8;</SelectItem>
       </SelectContent>
     </Select>
   );
