@@ -141,6 +141,7 @@ export default async function HomeTemplate(props: Props) {
                 </CardDescription>
               </CardHeader>
               <CardContent>
+                <br className="hidden sm:block" />
                 <div className="block rounded-md overflow-hidden">
                   <Image src={BookInVideoImg} alt="" />
                 </div>
