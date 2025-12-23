@@ -3,5 +3,10 @@
   "projects": "Projetos",
   "about_me": "Sobre mim",
   "contact": "Contato",
-  "full_stack_developer": "Desenvolvedor Full Stack"
+  "full_stack_developer": "Desenvolvedor Full Stack",
+  "ai_cv_maker": "Gerador de currículo com IA",
+  "ai_cv_maker_description": "Adicione suas informações profissionais, cole a descrição da vaga, escolha o idioma ou tom de sua preferência e receba um currículo e uma carta de apresentação impecáveis ​em menos de um minuto.",
+  "tech_stack": "Tecnologias utilizadas",
+  "github_code_link": "Ver código no github",
+  "live_project_link": "Ver projeto online"
 }

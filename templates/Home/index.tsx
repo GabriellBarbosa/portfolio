@@ -1,4 +1,4 @@
-import { H2, H3, P } from "@/components/Typography";
+import { H2, H3, H4, P } from "@/components/Typography";
 import { getDictionary } from "./dictionaries";
 import { SelectLanguage } from "@/components/SelectLanguage";
 import {
@@ -10,6 +10,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import Image from "next/image";
+import AiCvMakerImg from "@/public/images/ai_cv_maker.png";
+import { Badge } from "@/components/ui/badge";
 
 interface Props {
   language: string;
@@ -62,21 +65,64 @@ export default async function HomeTemplate(props: Props) {
       </header>
 
       <div className="container mx-auto px-4">
-        <section id="projects">
+        <section className="mt-8" id="projects">
           <H2 className="mb-4">{dict.projects}</H2>
 
-          <div className="flex flex-col gap-4">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <Card>
               <CardHeader>
-                <CardTitle>Card Title</CardTitle>
-                <CardDescription>Card Description</CardDescription>
-                <CardAction>Card Action</CardAction>
+                <CardTitle>
+                  {dict.ai_cv_maker}
+                  <Badge className="bg-green-600 ml-2">Online</Badge>
+                </CardTitle>
+
+                <CardDescription>
+                  {dict.ai_cv_maker_description}
+                </CardDescription>
               </CardHeader>
               <CardContent>
-                <p>Card Content</p>
+                <a
+                  className="block rounded-md overflow-hidden"
+                  target="_blank"
+                  href="https://ai-cv-maker-web.vercel.app/"
+                >
+                  <Image src={AiCvMakerImg} alt="" />
+                </a>
               </CardContent>
               <CardFooter>
-                <p>Card Footer</p>
+                <div>
+                  <P className="text-sm mb-1">{`${dict.tech_stack}:`}</P>
+                  <div className="flex gap-2 flex-wrap">
+                    <Badge>Next.js</Badge>
+                    <Badge>Tailwind css</Badge>
+                    <Badge>Shadcn</Badge>
+                    <Badge>Python</Badge>
+                    <Badge>FastAPI</Badge>
+                    <Badge>OpenAI</Badge>
+                    <Badge>Google Cloud</Badge>
+                  </div>
+
+                  <ul className="mt-4 flex gap-4">
+                    <li>
+                      <a
+                        className="block underline py-2"
+                        target="_blank"
+                        href="https://ai-cv-maker-web.vercel.app/"
+                      >
+                        <P>{dict.live_project_link}</P>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className="block underline py-2"
+                        target="_blank"
+                        href="https://github.com/GabriellBarbosa/ai_cv_maker"
+                      >
+                        <P>{dict.github_code_link}</P>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </CardFooter>
             </Card>
 
@@ -96,7 +142,7 @@ export default async function HomeTemplate(props: Props) {
           </div>
         </section>
 
-        <section id="about_me">
+        <section className="mt-8" id="about_me">
           <H2 className="mb-4">{dict.about_me}</H2>
 
           <div>
@@ -125,7 +171,7 @@ export default async function HomeTemplate(props: Props) {
           </div>
         </section>
 
-        <section id="contact">
+        <section className="mt-8" id="contact">
           <H2 className="mb-4">{dict.contact}</H2>
 
           <ul>

@@ -3,5 +3,10 @@
   "projects": "Projects",
   "about_me": "About me",
   "contact": "Contact",
-  "full_stack_developer": "Full Stack Developer"
+  "full_stack_developer": "Full Stack Developer",
+  "ai_cv_maker": "Resume generator with AI",
+  "ai_cv_maker_description": "Add your background, paste the job description, choose your preferred language or tone, and receive a polished CV plus cover letter in under a minute.",
+  "tech_stack": "Tech Stack",
+  "github_code_link": "Code on github",
+  "live_project_link": "Live project"
 }
