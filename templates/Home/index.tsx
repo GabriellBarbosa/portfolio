@@ -151,7 +151,7 @@ export default async function HomeTemplate(props: Props) {
                   <div className="flex gap-2 flex-wrap">
                     <Badge>Angular</Badge>
                     <Badge>NestJS</Badge>
-                    <Badge>PostgreeSQL</Badge>
+                    <Badge>PostgreSQL</Badge>
                   </div>
                 </div>
               </CardFooter>
