@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/card";
 import Image from "next/image";
 import AiCvMakerImg from "@/public/images/ai_cv_maker.png";
+import BookInVideoImg from "@/public/images/bookinvideo.png";
 import { Badge } from "@/components/ui/badge";
 
 interface Props {
@@ -128,15 +129,31 @@ export default async function HomeTemplate(props: Props) {
 
             <Card>
               <CardHeader>
-                <CardTitle>Card Title</CardTitle>
-                <CardDescription>Card Description</CardDescription>
-                <CardAction>Card Action</CardAction>
+                <CardTitle>
+                  {dict.clean_code_course}
+                  <Badge className="bg-yellow-100 ml-2 text-gray-900">
+                    {dict.in_progress}
+                  </Badge>
+                </CardTitle>
+
+                <CardDescription>
+                  {dict.bookinvideo_description}
+                </CardDescription>
               </CardHeader>
               <CardContent>
-                <p>Card Content</p>
+                <div className="block rounded-md overflow-hidden">
+                  <Image src={BookInVideoImg} alt="" />
+                </div>
               </CardContent>
               <CardFooter>
-                <p>Card Footer</p>
+                <div>
+                  <P className="text-sm mb-1">{`${dict.tech_stack}:`}</P>
+                  <div className="flex gap-2 flex-wrap">
+                    <Badge>Angular</Badge>
+                    <Badge>NestJS</Badge>
+                    <Badge>PostgreeSQL</Badge>
+                  </div>
+                </div>
               </CardFooter>
             </Card>
           </div>

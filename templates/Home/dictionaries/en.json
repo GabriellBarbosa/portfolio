@@ -8,5 +8,8 @@
   "ai_cv_maker_description": "Add your background, paste the job description, choose your preferred language or tone, and receive a polished CV plus cover letter in under a minute.",
   "tech_stack": "Tech Stack",
   "github_code_link": "Code on github",
-  "live_project_link": "Live project"
+  "live_project_link": "Live project",
+  "clean_code_course": "Clean code course",
+  "in_progress": "In progress",
+  "bookinvideo_description": "Summary of the book Clean Code where I present situations in which it is possible to apply the concepts described in the book."
 }
