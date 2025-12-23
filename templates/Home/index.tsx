@@ -27,7 +27,7 @@ export default async function HomeTemplate(props: Props) {
   return (
     <div>
       <header className="bg-white shadow-sm">
-        <div className="container mx-auto px-4 py-4">
+        <div className="max-w-[1200px] mx-auto px-4 py-4">
           <div className="flex justify-center mb-4">
             <SelectLanguage lang={language} />
           </div>
@@ -65,7 +65,7 @@ export default async function HomeTemplate(props: Props) {
         </div>
       </header>
 
-      <div className="container mx-auto px-4">
+      <div className="max-w-[1200px] mx-auto px-4">
         <section className="mt-8" id="projects">
           <H2 className="mb-4">{dict.projects}</H2>
 
