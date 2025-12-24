@@ -11,5 +11,5 @@
   "live_project_link": "Ver projeto online",
   "clean_code_course": "Curso de código limpo",
   "in_progress": "Em progresso",
-  "bookinvideo_description": "Resumo do livro código limpo onde eu apresento situações onde é possível aplicar os conceitos descritos no livro."
+  "bookinvideo_description": "Resumo do livro código limpo onde eu apresento situações onde é possível aplicar os conceitos descritos no livro. A primeira versão da plataforma foi feita em WordPress, estou migrando para Angular e Node."
 }

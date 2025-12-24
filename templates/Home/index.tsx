@@ -1,9 +1,8 @@
-import { H2, H3, H4, P } from "@/components/Typography";
+import { H2, H3, H4, Large, Muted, P } from "@/components/Typography";
 import { getDictionary } from "./dictionaries";
 import { SelectLanguage } from "@/components/SelectLanguage";
 import {
   Card,
-  CardAction,
   CardContent,
   CardDescription,
   CardFooter,
@@ -65,8 +64,8 @@ export default async function HomeTemplate(props: Props) {
         </div>
       </header>
 
-      <div className="max-w-[1200px] mx-auto px-4">
-        <section className="mt-8" id="projects">
+      <div className="">
+        <section className="max-w-[1200px] mx-auto px-4 mt-8" id="projects">
           <H2 className="mb-4">{dict.projects}</H2>
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -101,6 +100,7 @@ export default async function HomeTemplate(props: Props) {
                     <Badge>FastAPI</Badge>
                     <Badge>OpenAI</Badge>
                     <Badge>Google Cloud</Badge>
+                    <Badge>Vercel</Badge>
                   </div>
 
                   <ul className="mt-4 flex gap-4">
@@ -141,7 +141,6 @@ export default async function HomeTemplate(props: Props) {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <br className="hidden sm:block" />
                 <div className="block rounded-md overflow-hidden">
                   <Image src={BookInVideoImg} alt="" />
                 </div>
@@ -152,6 +151,7 @@ export default async function HomeTemplate(props: Props) {
                   <div className="flex gap-2 flex-wrap">
                     <Badge>Angular</Badge>
                     <Badge>NestJS</Badge>
+                    <Badge>Node.js</Badge>
                     <Badge>PostgreSQL</Badge>
                   </div>
                 </div>
@@ -161,37 +161,164 @@ export default async function HomeTemplate(props: Props) {
         </section>
 
         <section className="mt-8" id="about_me">
-          <H2 className="mb-4">{dict.about_me}</H2>
+          <H2 className="max-w-[1200px] mx-auto px-4 mb-4">{dict.about_me}</H2>
 
-          <div>
-            <H3>Gabriel Barbosa de Almeida</H3>
-            <P>Desenolvedor Full Stack</P>
+          <div className="max-w-[1200px] mx-auto px-4">
+            <Large className="text-bold">
+              Desenvolvedor Full Stack | Elleve
+            </Large>
+
+            <Muted className="text-sm text-gray">
+              fev de 2025 - nov de 2025 (10 meses)
+            </Muted>
             <P>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptates sunt eius odit, hic voluptas cum reprehenderit
-              obcaecati porro architecto doloremque? Doloribus cupiditate,
-              sapiente quis velit enim sed impedit autem totam.
+              A Elleve é uma HR Tech e ED Tech que facilita o ingresso de
+              colaboradores em cursos de instituições de ensino parceiras.
             </P>
 
-            <P>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptates sunt eius odit, hic voluptas cum reprehenderit
-              obcaecati porro architecto doloremque? Doloribus cupiditate,
-              sapiente quis velit enim sed impedit autem totam.
-            </P>
+            <ul className="flex flex-col gap-4 list-disc pl-6 mt-2">
+              <li>
+                <P>
+                  Atuei no desenvolvimento da funcionalidade de simulação de
+                  crédito consignado, integrando o sistema com APIs de parceiros
+                  financeiros.
+                </P>
+              </li>
+              <li>
+                <P>
+                  Contribuí para a construção de um ecossistema completo de
+                  cursos de instituições parceiras, atuando desde a plataforma
+                  do usuário final até o sistema interno de controle de vendas e
+                  ofertas.
+                </P>
+              </li>
+              <li>
+                <P>
+                  As soluções desenvolvidas ampliaram o acesso à educação,
+                  permitindo que mais pessoas financiem seus cursos de forma
+                  segura e acessível, ao mesmo tempo em que tornaram o processo
+                  mais sustentável para a empresa.
+                </P>
+              </li>
+            </ul>
 
-            <P>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptates sunt eius odit, hic voluptas cum reprehenderit
-              obcaecati porro architecto doloremque? Doloribus cupiditate,
-              sapiente quis velit enim sed impedit autem totam.
-            </P>
+            <P>Principais tecnologias utilizadas:</P>
+            <ul className="flex gap-2 mt-2 flex-wrap">
+              <li>
+                <Badge>Next.js</Badge>
+              </li>
+              <li>
+                <Badge>NestJS</Badge>
+              </li>
+              <li>
+                <Badge>Node.js</Badge>
+              </li>
+              <li>
+                <Badge>TypeORM</Badge>
+              </li>
+              <li>
+                <Badge>Python</Badge>
+              </li>
+              <li>
+                <Badge>PostgreSQL</Badge>
+              </li>
+            </ul>
+          </div>
+
+          <div className="bg-slate-100 mt-4">
+            <div className="max-w-[1200px] mx-auto px-4 py-6 mt-6">
+              <Large className="text-bold">
+                Desenvolvedor Front-End | R&B Rastreabilidade Brasil
+              </Large>
+
+              <Muted className="text-sm text-gray">
+                dez de 2021 - out de 2023 (1 ano e 11 meses)
+              </Muted>
+              <P>
+                A R&B é uma startup de que oferece sistemas de rastreabilidade
+                de produtos fazendo uso de etiquetas RFID (Radio-Frequency
+                Identification).
+              </P>
+
+              <ul className="flex flex-col gap-4 list-disc pl-6 mt-2">
+                <li>
+                  <P>
+                    Desenvolvi uma aplicação web para criação de layouts de
+                    etiquetas diretamente no navegador, utilizando canvas.
+                  </P>
+                </li>
+                <li>
+                  <P>
+                    O sistema converte automaticamente o layout visual em ZPL
+                    (Zebra Programming Language), eliminando a necessidade de
+                    edição manual.
+                  </P>
+                </li>
+                <li>
+                  <P>
+                    A solução reduziu o tempo de criação de etiquetas e melhorou
+                    significativamente a usabilidade para usuários não técnicos.
+                  </P>
+                </li>
+              </ul>
+
+              <P>Principais tecnologias utilizadas:</P>
+              <ul className="flex gap-2 mt-2 flex-wrap">
+                <li>
+                  <Badge>Angular</Badge>
+                </li>
+                <li>
+                  <Badge>React</Badge>
+                </li>
+                <li>
+                  <Badge>Node.js</Badge>
+                </li>
+                <li>
+                  <Badge>NestJS</Badge>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="max-w-[1200px] mx-auto px-4 mt-6">
+            <Large className="text-bold">Desenvolvedor Front-End | Houpa</Large>
+
+            <Muted className="text-sm text-gray">
+              jan de 2021 - mai de 2021 (5 meses)
+            </Muted>
+            <P>O Houpa é uma plataforma de compra e venda b2c e b2b.</P>
+
+            <ul className="flex flex-col gap-4 list-disc pl-6 mt-2">
+              <li>
+                <P>
+                  Fui responsável pelo desenvolvimento de componentes
+                  reutilizáveis em React para o projeto de e-commerce e pela
+                  criação de landing pages responsivas. A stack incluía React
+                  com Material UI no front-end e Node.js com NestJS no back-end.
+                </P>
+              </li>
+            </ul>
+
+            <P>Principais tecnologias utilizadas:</P>
+            <ul className="flex gap-2 mt-2 flex-wrap">
+              <li>
+                <Badge>React</Badge>
+              </li>
+              <li>
+                <Badge>MUI</Badge>
+              </li>
+              <li>
+                <Badge>NestJS</Badge>
+              </li>
+              <li>
+                <Badge>Node.js</Badge>
+              </li>
+            </ul>
           </div>
         </section>
 
         <section className="mt-8" id="contact">
           <H2 className="mb-4">{dict.contact}</H2>
-
           <ul>
             <li>E-mail: gabriel.dev.front@gmail.com</li>
             <li>Celular: 11 94928 8027</li>
