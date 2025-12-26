@@ -11,5 +11,14 @@
   "live_project_link": "Ver projeto online",
   "clean_code_course": "Curso de código limpo",
   "in_progress": "Em progresso",
-  "bookinvideo_description": "Resumo do livro código limpo onde eu apresento situações onde é possível aplicar os conceitos descritos no livro. A primeira versão da plataforma foi feita em WordPress, estou migrando para Angular e Node."
+  "bookinvideo_description": "Resumo do livro código limpo onde eu apresento situações onde é possível aplicar os conceitos descritos no livro. A primeira versão da plataforma foi feita em WordPress, estou migrando para Angular e Node.",
+  "elleve_fullstack_developer_title": "Desenvolvedor Full Stack | Elleve",
+  "elleve_tenure": "A Elleve é ​​uma HR Tech e ED Tech que ajuda financeiramente o rendimento de colaboradores em cursos de instituições de ensino parceiras.",
+  "responsabilities": "Responsabilidades",
+  "elleve_responsabilties": [
+    "Atuei no desenvolvimento da funcionalidade de simulação de crédito consignado, integrando o sistema com APIs de parceiros financeiros.",
+    " Contribuí para a construção de um ecossistema completo de cursos de instituições parceiras, atuando desde a plataforma do usuário final até o sistema interno de controle de vendas e ofertas.",
+    "As soluções desenvolvidas ampliaram o acesso à educação, permitindo que mais pessoas financiem seus cursos de forma segura e acessível, ao mesmo tempo em que tornaram o processo mais sustentável para a empresa."
+  ],
+  "main_tech_stack": "Principais tecnologias utilizadas"
 }

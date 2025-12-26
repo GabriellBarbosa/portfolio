@@ -11,5 +11,15 @@
   "live_project_link": "Live project",
   "clean_code_course": "Clean code course",
   "in_progress": "In progress",
-  "bookinvideo_description": "Summary of the book Clean Code where I present situations in which it is possible to apply the concepts described in the book. The first version of the platform was built with WordPress, now i am migrating it to Angular and Node"
+  "bookinvideo_description": "Summary of the book Clean Code where I present situations in which it is possible to apply the concepts described in the book. The first version of the platform was built with WordPress, now i am migrating it to Angular and Node",
+  "elleve_fullstack_developer_title": "Full Stack Developer | Elleve",
+  "elleve_tenure": "feb 2025 - nov 2025 (10 months)",
+  "elleve_description": "Elleve is an HR Tech and ED Tech company that financially supports employees' tuition fees for courses at partner educational institutions.",
+  "responsabilities": "Responsabilities",
+  "elleve_responsabilties": [
+    "I worked on developing the payroll loan simulation functionality, integrating the system with APIs from financial partners.",
+    "I contributed to building a complete ecosystem of courses from partner institutions, participating from the end-user platform to the internal sales and offer control system.",
+    "The solutions developed broadened access to education, allowing more people to finance their courses safely and affordably, while also making the process more sustainable for the company."
+  ],
+  "main_tech_stack": "Main tech stack"
 }

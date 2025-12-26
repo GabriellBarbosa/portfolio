@@ -64,8 +64,8 @@ export default async function HomeTemplate(props: Props) {
         </div>
       </header>
 
-      <div className="">
-        <section className="max-w-[1200px] mx-auto px-4 mt-8" id="projects">
+      <div className="max-w-[1200px] mx-auto px-4 ">
+        <section className="mt-8" id="projects">
           <H2 className="mb-4">{dict.projects}</H2>
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -161,85 +161,72 @@ export default async function HomeTemplate(props: Props) {
         </section>
 
         <section className="mt-8" id="about_me">
-          <H2 className="max-w-[1200px] mx-auto px-4 mb-4">{dict.about_me}</H2>
+          <H2 className="mb-4">{dict.about_me}</H2>
 
-          <div className="max-w-[1200px] mx-auto px-4">
-            <Large className="text-bold">
-              Desenvolvedor Full Stack | Elleve
-            </Large>
+          <div className="border-l-2 border-blue-50 pl-4 max-w-3xl">
+            <div>
+              <div className="relative">
+                <span className="absolute block w-[8px] h-[8px] ml-[-21px] top-0 bottom-0 my-auto bg-blue-700 rounded-full"></span>
+                <Large className="text-bold">
+                  {dict.elleve_fullstack_developer_title}
+                </Large>
+              </div>
 
-            <Muted className="text-sm text-gray">
-              fev de 2025 - nov de 2025 (10 meses)
-            </Muted>
-            <P>
-              A Elleve é uma HR Tech e ED Tech que facilita o ingresso de
-              colaboradores em cursos de instituições de ensino parceiras.
-            </P>
+              <Muted className="text-sm">{dict.elleve_tenure}</Muted>
 
-            <ul className="flex flex-col gap-4 list-disc pl-6 mt-2">
-              <li>
-                <P>
-                  Atuei no desenvolvimento da funcionalidade de simulação de
-                  crédito consignado, integrando o sistema com APIs de parceiros
-                  financeiros.
-                </P>
-              </li>
-              <li>
-                <P>
-                  Contribuí para a construção de um ecossistema completo de
-                  cursos de instituições parceiras, atuando desde a plataforma
-                  do usuário final até o sistema interno de controle de vendas e
-                  ofertas.
-                </P>
-              </li>
-              <li>
-                <P>
-                  As soluções desenvolvidas ampliaram o acesso à educação,
-                  permitindo que mais pessoas financiem seus cursos de forma
-                  segura e acessível, ao mesmo tempo em que tornaram o processo
-                  mais sustentável para a empresa.
-                </P>
-              </li>
-            </ul>
+              <Muted className="mt-4">{dict.elleve_description}</Muted>
 
-            <P>Principais tecnologias utilizadas:</P>
-            <ul className="flex gap-2 mt-2 flex-wrap">
-              <li>
-                <Badge>Next.js</Badge>
-              </li>
-              <li>
-                <Badge>NestJS</Badge>
-              </li>
-              <li>
-                <Badge>Node.js</Badge>
-              </li>
-              <li>
-                <Badge>TypeORM</Badge>
-              </li>
-              <li>
-                <Badge>Python</Badge>
-              </li>
-              <li>
-                <Badge>PostgreSQL</Badge>
-              </li>
-            </ul>
-          </div>
+              <P>{dict.responsabilities + ':'}</P>
+              <ul className="flex flex-col gap-4 list-disc pl-6 mt-2">
+                {(dict.elleve_responsabilties as string[]).map(
+                  (responsability) => (
+                    <li>
+                      <P>{responsability}</P>
+                    </li>
+                  )
+                )}
+              </ul>
 
-          <div className="bg-slate-100 mt-4">
-            <div className="max-w-[1200px] mx-auto px-4 py-6 mt-6">
-              <Large className="text-bold">
-                Desenvolvedor Front-End | R&B Rastreabilidade Brasil
-              </Large>
+              <P>{dict.main_tech_stack + ':'}</P>
+              <ul className="flex gap-2 mt-2 flex-wrap">
+                <li>
+                  <Badge>Next.js</Badge>
+                </li>
+                <li>
+                  <Badge>NestJS</Badge>
+                </li>
+                <li>
+                  <Badge>Node.js</Badge>
+                </li>
+                <li>
+                  <Badge>TypeORM</Badge>
+                </li>
+                <li>
+                  <Badge>Python</Badge>
+                </li>
+                <li>
+                  <Badge>PostgreSQL</Badge>
+                </li>
+              </ul>
+            </div>
 
-              <Muted className="text-sm text-gray">
-                dez de 2021 - out de 2023 (1 ano e 11 meses)
-              </Muted>
-              <P>
+            <div className="mt-6">
+              <div className="relative">
+                <span className="absolute block w-[8px] h-[8px] ml-[-21px] top-0 bottom-0 my-auto bg-blue-700 rounded-full"></span>
+                <Large className="text-bold">
+                  Desenvolvedor Front-End | R&B Rastreabilidade Brasil
+                </Large>
+              </div>
+
+              <Muted>dez de 2021 - out de 2023 (1 ano e 11 meses)</Muted>
+
+              <Muted className="mt-4">
                 A R&B é uma startup de que oferece sistemas de rastreabilidade
                 de produtos fazendo uso de etiquetas RFID (Radio-Frequency
                 Identification).
-              </P>
+              </Muted>
 
+              <P>Responsabilidades:</P>
               <ul className="flex flex-col gap-4 list-disc pl-6 mt-2">
                 <li>
                   <P>
@@ -278,42 +265,51 @@ export default async function HomeTemplate(props: Props) {
                 </li>
               </ul>
             </div>
-          </div>
 
-          <div className="max-w-[1200px] mx-auto px-4 mt-6">
-            <Large className="text-bold">Desenvolvedor Front-End | Houpa</Large>
+            <div className="mt-6">
+              <div className="relative">
+                <span className="absolute block w-[8px] h-[8px] ml-[-21px] top-0 bottom-0 my-auto bg-blue-700 rounded-full"></span>
+                <Large className="text-bold">
+                  Desenvolvedor Front-End | Houpa
+                </Large>
+              </div>
 
-            <Muted className="text-sm text-gray">
-              jan de 2021 - mai de 2021 (5 meses)
-            </Muted>
-            <P>O Houpa é uma plataforma de compra e venda b2c e b2b.</P>
+              <Muted>jan de 2021 - mai de 2021 (5 meses)</Muted>
 
-            <ul className="flex flex-col gap-4 list-disc pl-6 mt-2">
-              <li>
-                <P>
-                  Fui responsável pelo desenvolvimento de componentes
-                  reutilizáveis em React para o projeto de e-commerce e pela
-                  criação de landing pages responsivas. A stack incluía React
-                  com Material UI no front-end e Node.js com NestJS no back-end.
-                </P>
-              </li>
-            </ul>
+              <Muted className="mt-4">
+                O Houpa é uma plataforma de compra e venda b2c e b2b.
+              </Muted>
 
-            <P>Principais tecnologias utilizadas:</P>
-            <ul className="flex gap-2 mt-2 flex-wrap">
-              <li>
-                <Badge>React</Badge>
-              </li>
-              <li>
-                <Badge>MUI</Badge>
-              </li>
-              <li>
-                <Badge>NestJS</Badge>
-              </li>
-              <li>
-                <Badge>Node.js</Badge>
-              </li>
-            </ul>
+              <P>Responsabilidades:</P>
+
+              <ul className="flex flex-col gap-4 list-disc pl-6 mt-2">
+                <li>
+                  <P>
+                    Fui responsável pelo desenvolvimento de componentes
+                    reutilizáveis em React para o projeto de e-commerce e pela
+                    criação de landing pages responsivas. A stack incluía React
+                    com Material UI no front-end e Node.js com NestJS no
+                    back-end.
+                  </P>
+                </li>
+              </ul>
+
+              <P>Principais tecnologias utilizadas:</P>
+              <ul className="flex gap-2 mt-2 flex-wrap">
+                <li>
+                  <Badge>React</Badge>
+                </li>
+                <li>
+                  <Badge>MUI</Badge>
+                </li>
+                <li>
+                  <Badge>NestJS</Badge>
+                </li>
+                <li>
+                  <Badge>Node.js</Badge>
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
 
