@@ -13,7 +13,8 @@
   "in_progress": "Em progresso",
   "bookinvideo_description": "Resumo do livro código limpo onde eu apresento situações onde é possível aplicar os conceitos descritos no livro. A primeira versão da plataforma foi feita em WordPress, estou migrando para Angular e Node.",
   "elleve_fullstack_developer_title": "Desenvolvedor Full Stack | Elleve",
-  "elleve_tenure": "A Elleve é ​​uma HR Tech e ED Tech que ajuda financeiramente o rendimento de colaboradores em cursos de instituições de ensino parceiras.",
+  "elleve_tenure": "fev de 2025 - nov de 2025 (10 meses)",
+  "elleve_description": "A Elleve é ​​uma HR Tech e ED Tech que ajuda financeiramente o rendimento de colaboradores em cursos de instituições de ensino parceiras.",
   "responsabilities": "Responsabilidades",
   "elleve_responsabilties": [
     "Atuei no desenvolvimento da funcionalidade de simulação de crédito consignado, integrando o sistema com APIs de parceiros financeiros.",

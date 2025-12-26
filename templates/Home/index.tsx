@@ -179,8 +179,8 @@ export default async function HomeTemplate(props: Props) {
               <P>{dict.responsabilities + ':'}</P>
               <ul className="flex flex-col gap-4 list-disc pl-6 mt-2">
                 {(dict.elleve_responsabilties as string[]).map(
-                  (responsability) => (
-                    <li>
+                  (responsability, index) => (
+                    <li key={index}>
                       <P>{responsability}</P>
                     </li>
                   )
