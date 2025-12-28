@@ -94,7 +94,7 @@ export default async function HomeTemplate(props: Props) {
                   <P className="text-sm mb-1">{`${dict.tech_stack}:`}</P>
                   <div className="flex gap-2 flex-wrap">
                     <Badge>Next.js</Badge>
-                    <Badge>Tailwind css</Badge>
+                    <Badge>Tailwind CSS</Badge>
                     <Badge>Shadcn</Badge>
                     <Badge>Python</Badge>
                     <Badge>FastAPI</Badge>
@@ -188,6 +188,9 @@ export default async function HomeTemplate(props: Props) {
               <ul className="flex gap-2 mt-2 flex-wrap">
                 <li>
                   <Badge>Next.js</Badge>
+                </li>
+                <li>
+                  <Badge>Tailwind CSS</Badge>
                 </li>
                 <li>
                   <Badge>NestJS</Badge>
