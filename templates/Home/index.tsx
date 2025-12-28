@@ -176,18 +176,15 @@ export default async function HomeTemplate(props: Props) {
 
               <Muted className="mt-4">{dict.elleve_description}</Muted>
 
-              <P>{dict.responsabilities + ':'}</P>
-              <ul className="flex flex-col gap-4 list-disc pl-6 mt-2">
+              <div className="flex flex-col gap-4 mt-2">
                 {(dict.elleve_responsabilties as string[]).map(
                   (responsability, index) => (
-                    <li key={index}>
-                      <P>{responsability}</P>
-                    </li>
+                    <P key={index}>{responsability}</P>
                   )
                 )}
-              </ul>
+              </div>
 
-              <P>{dict.main_tech_stack + ':'}</P>
+              <P>{dict.main_tech_stack + ":"}</P>
               <ul className="flex gap-2 mt-2 flex-wrap">
                 <li>
                   <Badge>Next.js</Badge>
@@ -205,6 +202,9 @@ export default async function HomeTemplate(props: Props) {
                   <Badge>Python</Badge>
                 </li>
                 <li>
+                  <Badge>FastAPI</Badge>
+                </li>
+                <li>
                   <Badge>PostgreSQL</Badge>
                 </li>
               </ul>
@@ -213,43 +213,22 @@ export default async function HomeTemplate(props: Props) {
             <div className="mt-6">
               <div className="relative">
                 <span className="absolute block w-[8px] h-[8px] ml-[-21px] top-0 bottom-0 my-auto bg-blue-700 rounded-full"></span>
-                <Large className="text-bold">
-                  Desenvolvedor Front-End | R&B Rastreabilidade Brasil
-                </Large>
+                <Large className="text-bold">{dict.rb_title}</Large>
               </div>
 
-              <Muted>dez de 2021 - out de 2023 (1 ano e 11 meses)</Muted>
+              <Muted>{dict.rb_tenure}</Muted>
 
-              <Muted className="mt-4">
-                A R&B é uma startup de que oferece sistemas de rastreabilidade
-                de produtos fazendo uso de etiquetas RFID (Radio-Frequency
-                Identification).
-              </Muted>
+              <Muted className="mt-4">{dict.rb_description}</Muted>
 
-              <P>Responsabilidades:</P>
-              <ul className="flex flex-col gap-4 list-disc pl-6 mt-2">
-                <li>
-                  <P>
-                    Desenvolvi uma aplicação web para criação de layouts de
-                    etiquetas diretamente no navegador, utilizando canvas.
-                  </P>
-                </li>
-                <li>
-                  <P>
-                    O sistema converte automaticamente o layout visual em ZPL
-                    (Zebra Programming Language), eliminando a necessidade de
-                    edição manual.
-                  </P>
-                </li>
-                <li>
-                  <P>
-                    A solução reduziu o tempo de criação de etiquetas e melhorou
-                    significativamente a usabilidade para usuários não técnicos.
-                  </P>
-                </li>
-              </ul>
+              <div className="flex flex-col gap-4 mt-2">
+                {(dict.rb_responsabilties as string[]).map(
+                  (responsability, index) => (
+                    <P key={index}>{responsability}</P>
+                  )
+                )}
+              </div>
 
-              <P>Principais tecnologias utilizadas:</P>
+              <P>{dict.main_tech_stack + ":"}</P>
               <ul className="flex gap-2 mt-2 flex-wrap">
                 <li>
                   <Badge>Angular</Badge>
@@ -269,38 +248,28 @@ export default async function HomeTemplate(props: Props) {
             <div className="mt-6">
               <div className="relative">
                 <span className="absolute block w-[8px] h-[8px] ml-[-21px] top-0 bottom-0 my-auto bg-blue-700 rounded-full"></span>
-                <Large className="text-bold">
-                  Desenvolvedor Front-End | Houpa
-                </Large>
+                <Large className="text-bold">{dict.houpa_title}</Large>
               </div>
 
-              <Muted>jan de 2021 - mai de 2021 (5 meses)</Muted>
+              <Muted>{dict.houpa_tenure}</Muted>
 
-              <Muted className="mt-4">
-                O Houpa é uma plataforma de compra e venda b2c e b2b.
-              </Muted>
+              <Muted className="mt-4">{dict.houpa_description}</Muted>
 
-              <P>Responsabilidades:</P>
+              <div className="flex flex-col gap-4 mt-2">
+                {(dict.houpa_responsabilties as string[]).map(
+                  (responsability, index) => (
+                    <P key={index}>{responsability}</P>
+                  )
+                )}
+              </div>
 
-              <ul className="flex flex-col gap-4 list-disc pl-6 mt-2">
-                <li>
-                  <P>
-                    Fui responsável pelo desenvolvimento de componentes
-                    reutilizáveis em React para o projeto de e-commerce e pela
-                    criação de landing pages responsivas. A stack incluía React
-                    com Material UI no front-end e Node.js com NestJS no
-                    back-end.
-                  </P>
-                </li>
-              </ul>
-
-              <P>Principais tecnologias utilizadas:</P>
+              <P>{dict.main_tech_stack + ":"}</P>
               <ul className="flex gap-2 mt-2 flex-wrap">
                 <li>
                   <Badge>React</Badge>
                 </li>
                 <li>
-                  <Badge>MUI</Badge>
+                  <Badge>Material UI/MUI</Badge>
                 </li>
                 <li>
                   <Badge>NestJS</Badge>

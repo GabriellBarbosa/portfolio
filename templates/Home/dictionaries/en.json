@@ -17,9 +17,19 @@
   "elleve_description": "Elleve is an HR Tech and ED Tech company that financially supports employees' tuition fees for courses at partner educational institutions.",
   "responsabilities": "Responsabilities",
   "elleve_responsabilties": [
-    "I worked on developing the payroll loan simulation functionality, integrating the system with APIs from financial partners.",
-    "I contributed to building a complete ecosystem of courses from partner institutions, participating from the end-user platform to the internal sales and offer control system.",
-    "The solutions developed broadened access to education, allowing more people to finance their courses safely and affordably, while also making the process more sustainable for the company."
+    "I worked on developing internal systems and financial integrations, creating scalable APIs and React interfaces for products used by thousands of users."
   ],
-  "main_tech_stack": "Main tech stack"
+  "main_tech_stack": "Main tech stack",
+  "rb_title": "Front-End Developer | R&B Rastreabilidade Brasil",
+  "rb_tenure": "dec 2021 - oct 2023 (1 year and 11 months)",
+  "rb_description": "R&B is a startup that offers product traceability systems using RFID (Radio-Frequency Identification) tags.",
+  "rb_responsabilties": [
+    "I developed a web application for creating label layouts directly in the browser, using canvas. The solution reduced label creation time and significantly improved usability for non-technical users."
+  ],
+  "houpa_title": "Front-End Developer | Houpa",
+  "houpa_tenure": "jan 2021 - may 2021 (5 months)",
+  "houpa_description": "Houpa is a B2C and B2B platform for buying and selling in the fashion industry.",
+  "houpa_responsabilties": [
+    "I developed reusable components in React for the e-commerce project and for the creation of responsive landing pages."
+  ]
 }

@@ -17,9 +17,19 @@
   "elleve_description": "A Elleve é ​​uma HR Tech e ED Tech que ajuda financeiramente o rendimento de colaboradores em cursos de instituições de ensino parceiras.",
   "responsabilities": "Responsabilidades",
   "elleve_responsabilties": [
-    "Atuei no desenvolvimento da funcionalidade de simulação de crédito consignado, integrando o sistema com APIs de parceiros financeiros.",
-    " Contribuí para a construção de um ecossistema completo de cursos de instituições parceiras, atuando desde a plataforma do usuário final até o sistema interno de controle de vendas e ofertas.",
-    "As soluções desenvolvidas ampliaram o acesso à educação, permitindo que mais pessoas financiem seus cursos de forma segura e acessível, ao mesmo tempo em que tornaram o processo mais sustentável para a empresa."
+    "Atuei no desenvolvimento de sistemas internos e integrações financeiras, criando APIs escaláveis e interfaces em React para produtos utilizados por milhares de usuários."
   ],
-  "main_tech_stack": "Principais tecnologias utilizadas"
+  "main_tech_stack": "Principais tecnologias utilizadas",
+  "rb_title": "Desenvolvedor Front-End | R&B Rastreabilidade Brasil",
+  "rb_tenure": "dez de 2021 - out de 2023 (1 ano e 11 meses)",
+  "rb_description": "A R&B é uma startup de que oferece sistemas de rastreabilidade de produtos fazendo uso de etiquetas RFID (Radio-Frequency Identification).",
+  "rb_responsabilties": [
+    "Desenvolvi uma aplicação web para criação de layouts de etiquetas diretamente no navegador, utilizando canvas. A solução reduziu o tempo de criação de etiquetas e melhorou significativamente a usabilidade para usuários não técnicos."
+  ],
+  "houpa_title": "Desenvolvedor Front-End | Houpa",
+  "houpa_tenure": "jan de 2021 - mai de 2021 (5 meses)",
+  "houpa_description": "O Houpa é uma plataforma b2c e b2b de compra e venda no setor de moda.",
+  "houpa_responsabilties": [
+    "Desenvolvi componentes reutilizáveis em React para o projeto de e-commerce e pela criação de landing pages responsivas."
+  ]
 }
