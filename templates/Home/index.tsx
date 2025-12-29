@@ -14,6 +14,27 @@ import AiCvMakerImg from "@/public/images/ai_cv_maker.png";
 import BookInVideoImg from "@/public/images/bookinvideo.png";
 import { Badge } from "@/components/ui/badge";
 
+import {
+  Item,
+  ItemActions,
+  ItemContent,
+  ItemDescription,
+  ItemGroup,
+  ItemHeader,
+  ItemMedia,
+  ItemSeparator,
+  ItemTitle,
+} from "@/components/ui/item";
+import { Button } from "@/components/ui/button";
+import {
+  Github,
+  Link,
+  Linkedin,
+  Mail,
+  Phone,
+  SquareArrowOutUpRight,
+} from "lucide-react";
+
 interface Props {
   language: string;
 }
@@ -285,14 +306,89 @@ export default async function HomeTemplate(props: Props) {
           </div>
         </section>
 
-        <section className="mt-8" id="contact">
+        <section className="mt-8 mb-[60px]" id="contact">
           <H2 className="mb-4">{dict.contact}</H2>
-          <ul>
-            <li>E-mail: gabriel.dev.front@gmail.com</li>
-            <li>Celular: 11 94928 8027</li>
-            <li>LinkedIn</li>
-            <li>GitHub</li>
-          </ul>
+          <ItemGroup className="max-w-md">
+            <Item>
+              <ItemMedia>
+                <Mail />
+              </ItemMedia>
+              <ItemContent className="gap-1">
+                <ItemTitle>E-mail</ItemTitle>
+                <ItemDescription>gabriel.dev.front@gmail.com</ItemDescription>
+              </ItemContent>
+              <ItemActions>
+                <a href="mailto:gabriel.dev.front@gmail.com">
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="rounded-full cursor-pointer"
+                  >
+                    <SquareArrowOutUpRight />
+                  </Button>
+                </a>
+              </ItemActions>
+            </Item>
+            <ItemSeparator />
+            <Item>
+              <ItemMedia>
+                <Phone />
+              </ItemMedia>
+              <ItemContent className="gap-1">
+                <ItemTitle>WhatsApp</ItemTitle>
+                <ItemDescription>+55 11 94928 8027</ItemDescription>
+              </ItemContent>
+              <ItemActions>
+                <a href="https://wa.me/5511949288027" target="_blank">
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="rounded-full cursor-pointer"
+                  >
+                    <SquareArrowOutUpRight />
+                  </Button>
+                </a>
+              </ItemActions>
+            </Item>
+            <ItemSeparator />
+            <Item>
+              <ItemMedia>
+                <Linkedin />
+              </ItemMedia>
+              <ItemContent className="gap-1">
+                <ItemTitle>LinkedIn</ItemTitle>
+              </ItemContent>
+              <ItemActions>
+                <a
+                  href="https://www.linkedin.com/in/gabriel-barbosa-de-almeida-57b87b18a/"
+                  target="_blank"
+                >
+                  <Button variant="ghost" size="icon" className="rounded-full">
+                    <SquareArrowOutUpRight />
+                  </Button>
+                </a>
+              </ItemActions>
+            </Item>
+            <ItemSeparator />
+            <Item>
+              <ItemMedia>
+                <Github />
+              </ItemMedia>
+              <ItemContent className="gap-1">
+                <ItemTitle>GitHub</ItemTitle>
+              </ItemContent>
+              <ItemActions>
+                <a
+                  href="https://github.com/GabriellBarbosa"
+                  target="_blank"
+                >
+                  <Button variant="ghost" size="icon" className="rounded-full">
+                    <SquareArrowOutUpRight />
+                  </Button>
+                </a>
+              </ItemActions>
+            </Item>
+          </ItemGroup>
         </section>
       </div>
     </div>
