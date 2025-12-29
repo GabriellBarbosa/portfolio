@@ -214,6 +214,9 @@ export default async function HomeTemplate(props: Props) {
                   <Badge>Tailwind CSS</Badge>
                 </li>
                 <li>
+                  <Badge>Shadcn</Badge>
+                </li>
+                <li>
                   <Badge>NestJS</Badge>
                 </li>
                 <li>
@@ -258,7 +261,13 @@ export default async function HomeTemplate(props: Props) {
                   <Badge>Angular</Badge>
                 </li>
                 <li>
+                  <Badge>PrimeNG</Badge>
+                </li>
+                <li>
                   <Badge>React</Badge>
+                </li>
+                <li>
+                  <Badge>Material UI/MUI</Badge>
                 </li>
                 <li>
                   <Badge>Node.js</Badge>
@@ -378,10 +387,7 @@ export default async function HomeTemplate(props: Props) {
                 <ItemTitle>GitHub</ItemTitle>
               </ItemContent>
               <ItemActions>
-                <a
-                  href="https://github.com/GabriellBarbosa"
-                  target="_blank"
-                >
+                <a href="https://github.com/GabriellBarbosa" target="_blank">
                   <Button variant="ghost" size="icon" className="rounded-full">
                     <SquareArrowOutUpRight />
                   </Button>
