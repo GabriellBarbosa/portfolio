@@ -1,9 +1,10 @@
 import HomeTemplate from "@/templates/Home";
+import { Languages } from "@/templates/Home/dictionaries";
 
 export default async function Home({
   params,
 }: {
-  params: Promise<{ lang: string }>;
+  params: Promise<{ lang: Languages }>;
 }) {
   const { lang } = await params;
 
