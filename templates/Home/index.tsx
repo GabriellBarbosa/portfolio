@@ -1,6 +1,5 @@
-import { H2, H3, H4, Large, Muted, P } from "@/components/Typography";
-import { getDictionary } from "./dictionaries";
-import { SelectLanguage } from "@/components/SelectLanguage";
+import { H2, Large, Muted, P } from "@/components/Typography";
+import { getDictionary, Languages } from "./dictionaries";
 import {
   Card,
   CardContent,
@@ -13,14 +12,12 @@ import Image from "next/image";
 import AiCvMakerImg from "@/public/images/ai_cv_maker.png";
 import BookInVideoImg from "@/public/images/bookinvideo.png";
 import { Badge } from "@/components/ui/badge";
-
 import {
   Item,
   ItemActions,
   ItemContent,
   ItemDescription,
   ItemGroup,
-  ItemHeader,
   ItemMedia,
   ItemSeparator,
   ItemTitle,
@@ -28,15 +25,15 @@ import {
 import { Button } from "@/components/ui/button";
 import {
   Github,
-  Link,
   Linkedin,
   Mail,
   Phone,
   SquareArrowOutUpRight,
 } from "lucide-react";
+import { Header } from "@/components/Header";
 
 interface Props {
-  language: string;
+  language: Languages;
 }
 
 export default async function HomeTemplate(props: Props) {
@@ -46,44 +43,7 @@ export default async function HomeTemplate(props: Props) {
 
   return (
     <div>
-      <header className="bg-white shadow-sm">
-        <div className="max-w-[1200px] mx-auto px-4 py-4">
-          <div className="flex justify-center mb-4">
-            <SelectLanguage lang={language} />
-          </div>
-          <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-            <div className="flex justify-center items-center gap-3">
-              <div>
-                <P className="text-xs uppercase tracking-[0.14em] text-center sm:text-left">
-                  Gabriel Barbosa
-                </P>
-                <H3 className="text-lg">{dict.full_stack_developer}</H3>
-              </div>
-            </div>
-
-            <nav className="flex justify-center">
-              <a
-                className="mr-4 py-2 transition hover:border-white/30 hover:bg-white/5"
-                href="#projects"
-              >
-                {dict.projects}
-              </a>
-              <a
-                className="mx-4 py-2 transition hover:border-white/30 hover:bg-white/5"
-                href="#about_me"
-              >
-                {dict.about_me}
-              </a>
-              <a
-                className="ml-4 py-2 transition hover:border-white/30 hover:bg-white/5"
-                href="#contact"
-              >
-                {dict.contact}
-              </a>
-            </nav>
-          </div>
-        </div>
-      </header>
+      <Header dict={dict} language={language} />
 
       <div className="max-w-[1200px] mx-auto px-4 ">
         <section className="mt-8" id="projects">
@@ -338,7 +298,9 @@ export default async function HomeTemplate(props: Props) {
                 </a>
               </ItemActions>
             </Item>
+
             <ItemSeparator />
+
             <Item>
               <ItemMedia>
                 <Phone />
@@ -359,7 +321,9 @@ export default async function HomeTemplate(props: Props) {
                 </a>
               </ItemActions>
             </Item>
+
             <ItemSeparator />
+
             <Item>
               <ItemMedia>
                 <Linkedin />
@@ -378,7 +342,9 @@ export default async function HomeTemplate(props: Props) {
                 </a>
               </ItemActions>
             </Item>
+
             <ItemSeparator />
+
             <Item>
               <ItemMedia>
                 <Github />
