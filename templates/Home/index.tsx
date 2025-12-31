@@ -122,19 +122,46 @@ export default async function HomeTemplate(props: Props) {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="block rounded-md overflow-hidden">
+                <a
+                  href="https://bookinvideo.vercel.app/"
+                  target="_blank"
+                  className="block rounded-md overflow-hidden"
+                >
                   <Image src={BookInVideoImg} alt="" />
-                </div>
+                </a>
               </CardContent>
               <CardFooter>
                 <div>
                   <P className="text-sm mb-1">{`${dict.tech_stack}:`}</P>
                   <div className="flex gap-2 flex-wrap">
-                    <Badge>Angular</Badge>
+                    <Badge>Next.js</Badge>
+                    <Badge>Tailwind CSS</Badge>
+                    <Badge>Shadcn</Badge>
                     <Badge>NestJS</Badge>
                     <Badge>Node.js</Badge>
                     <Badge>PostgreSQL</Badge>
                   </div>
+
+                  <ul className="mt-4 flex gap-4">
+                    <li>
+                      <a
+                        className="block underline py-2"
+                        target="_blank"
+                        href="https://bookinvideo.vercel.app/"
+                      >
+                        <P>{dict.live_project_link}</P>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className="block underline py-2"
+                        target="_blank"
+                        href="https://github.com/GabriellBarbosa/bookinvideo"
+                      >
+                        <P>{dict.github_code_link}</P>
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </CardFooter>
             </Card>
