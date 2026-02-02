@@ -147,7 +147,7 @@ export default async function HomeTemplate(props: Props) {
                       <a
                         className="block underline py-2"
                         target="_blank"
-                        href="https://bookinvideo.vercel.app/"
+                        href="https://bookinvideo-web.vercel.app/"
                       >
                         <P>{dict.live_project_link}</P>
                       </a>
