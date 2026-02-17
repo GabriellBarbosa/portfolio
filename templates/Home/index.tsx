@@ -123,7 +123,7 @@ export default async function HomeTemplate(props: Props) {
               </CardHeader>
               <CardContent>
                 <a
-                  href="https://bookinvideo.vercel.app/"
+                  href="https://bookinvideo-web.vercel.app/"
                   target="_blank"
                   className="block rounded-md overflow-hidden"
                 >
