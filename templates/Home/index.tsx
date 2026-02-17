@@ -80,7 +80,7 @@ export default async function HomeTemplate(props: Props) {
                     <Badge>Python</Badge>
                     <Badge>FastAPI</Badge>
                     <Badge>OpenAI</Badge>
-                    <Badge>Google Cloud</Badge>
+                    <Badge>Google Cloud Platform (GCP)</Badge>
                     <Badge>Vercel</Badge>
                   </div>
 
