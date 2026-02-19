@@ -1,5 +1,6 @@
-import { H2, Large, Muted, P } from "@/components/Typography";
-import { getDictionary, Languages } from "./dictionaries";
+import { Header } from "@/components/Header";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -8,29 +9,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import Image from "next/image";
-import AiCvMakerImg from "@/public/images/ai_cv_maker.png";
-import BookInVideoImg from "@/public/images/bookinvideo.png";
-import { Badge } from "@/components/ui/badge";
-import {
-  Item,
-  ItemActions,
-  ItemContent,
-  ItemDescription,
-  ItemGroup,
-  ItemMedia,
-  ItemSeparator,
-  ItemTitle,
-} from "@/components/ui/item";
-import { Button } from "@/components/ui/button";
-import {
-  Github,
-  Linkedin,
-  Mail,
-  Phone,
-  SquareArrowOutUpRight,
-} from "lucide-react";
-import { Header } from "@/components/Header";
+import { ExpandableText } from "@/components/ui/expandable-text";
+import { Github, Linkedin, Mail, SquareArrowOutUpRight } from "lucide-react";
+import { getDictionary, Languages } from "./dictionaries";
 
 interface Props {
   language: Languages;
@@ -38,358 +19,255 @@ interface Props {
 
 export default async function HomeTemplate(props: Props) {
   const { language } = props;
-
   const dict = await getDictionary(language);
+
+  const projects = [
+    {
+      title: dict.ai_cv_maker,
+      description: dict.ai_cv_maker_description,
+      tags: [
+        "Next.js",
+        "Tailwind CSS",
+        "Shadcn",
+        "Python",
+        "FastAPI",
+        "OpenAI",
+        "GCP",
+        "Vercel",
+      ],
+      demo: "https://ai-cv-maker-web.vercel.app/",
+      github: "https://github.com/GabriellBarbosa/ai_cv_maker",
+    },
+    {
+      title: dict.clean_code_course,
+      description: dict.bookinvideo_description,
+      tags: [
+        "Next.js",
+        "Tailwind CSS",
+        "Shadcn",
+        "NestJS",
+        "Node.js",
+        "PostgreSQL",
+        "GCP",
+        "Vercel",
+      ],
+      demo: "https://bookinvideo-web.vercel.app/",
+      github: "https://github.com/GabriellBarbosa/bookinvideo",
+    },
+  ];
+
+  const experiences = [
+    {
+      role: dict.elleve_fullstack_developer_title,
+      period: dict.elleve_tenure,
+      bullets: dict.elleve_responsabilties,
+    },
+    {
+      role: dict.rb_title,
+      period: dict.rb_tenure,
+      bullets: dict.rb_responsabilties,
+    },
+    {
+      role: dict.houpa_title,
+      period: dict.houpa_tenure,
+      bullets: dict.houpa_responsabilties,
+    },
+  ];
+
+  const techGroups = [
+    { title: dict.frontend, items: dict.stack_frontend },
+    { title: dict.backend, items: dict.stack_backend },
+    { title: dict.database, items: dict.stack_database },
+    { title: dict.infra_tools, items: dict.stack_infra_tools },
+  ];
 
   return (
     <div>
       <Header dict={dict} language={language} />
 
-      <div className="max-w-[1200px] mx-auto px-4 ">
-        <section className="mt-8" id="projects">
-          <H2 className="mb-4">{dict.projects}</H2>
+      <main>
+        <section id="hero">
+          <div className="relative bg-zinc-50 overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-transparent to-cyan-500/10 pointer-events-none" />
+            <div className="max-w-6xl mx-auto relative z-10 py-24 px-4">
+              <p className="text-sm uppercase tracking-[0.16em] text-muted-foreground">
+                {dict.full_stack_developer}
+              </p>
+              <h1 className="mt-3 text-4xl font-bold tracking-tight sm:text-5xl">
+                {dict.hero_name}
+              </h1>
+              <p className="mt-5 max-w-2xl text-lg text-muted-foreground">
+                {dict.hero_short_bio}
+              </p>
 
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            <Card>
-              <CardHeader>
-                <CardTitle>
-                  {dict.ai_cv_maker}
-                  <Badge className="bg-green-600 ml-2">Online</Badge>
-                </CardTitle>
-
-                <CardDescription>
-                  {dict.ai_cv_maker_description}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <a
-                  className="block rounded-md overflow-hidden"
-                  target="_blank"
-                  href="https://ai-cv-maker-web.vercel.app/"
-                >
-                  <Image src={AiCvMakerImg} alt="" />
-                </a>
-              </CardContent>
-              <CardFooter>
-                <div>
-                  <P className="text-sm mb-1">{`${dict.tech_stack}:`}</P>
-                  <div className="flex gap-2 flex-wrap">
-                    <Badge>Next.js</Badge>
-                    <Badge>Tailwind CSS</Badge>
-                    <Badge>Shadcn</Badge>
-                    <Badge>Python</Badge>
-                    <Badge>FastAPI</Badge>
-                    <Badge>OpenAI</Badge>
-                    <Badge>Google Cloud Platform (GCP)</Badge>
-                    <Badge>Vercel</Badge>
-                  </div>
-
-                  <ul className="mt-4 flex gap-4">
-                    <li>
-                      <a
-                        className="block underline py-2"
-                        target="_blank"
-                        href="https://ai-cv-maker-web.vercel.app/"
-                      >
-                        <P>{dict.live_project_link}</P>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="block underline py-2"
-                        target="_blank"
-                        href="https://github.com/GabriellBarbosa/ai_cv_maker"
-                      >
-                        <P>{dict.github_code_link}</P>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </CardFooter>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle>
-                  {dict.clean_code_course}
-                  <Badge className="bg-yellow-100 ml-2 text-gray-900">
-                    {dict.in_progress}
-                  </Badge>
-                </CardTitle>
-
-                <CardDescription>
-                  {dict.bookinvideo_description}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <a
-                  href="https://bookinvideo-web.vercel.app/"
-                  target="_blank"
-                  className="block rounded-md overflow-hidden"
-                >
-                  <Image src={BookInVideoImg} alt="" />
-                </a>
-              </CardContent>
-              <CardFooter>
-                <div>
-                  <P className="text-sm mb-1">{`${dict.tech_stack}:`}</P>
-                  <div className="flex gap-2 flex-wrap">
-                    <Badge>Next.js</Badge>
-                    <Badge>Tailwind CSS</Badge>
-                    <Badge>Shadcn</Badge>
-                    <Badge>NestJS</Badge>
-                    <Badge>Node.js</Badge>
-                    <Badge>PostgreSQL</Badge>
-                  </div>
-
-                  <ul className="mt-4 flex gap-4">
-                    <li>
-                      <a
-                        className="block underline py-2"
-                        target="_blank"
-                        href="https://bookinvideo-web.vercel.app/"
-                      >
-                        <P>{dict.live_project_link}</P>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="block underline py-2"
-                        target="_blank"
-                        href="https://github.com/GabriellBarbosa/bookinvideo"
-                      >
-                        <P>{dict.github_code_link}</P>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </CardFooter>
-            </Card>
-          </div>
-        </section>
-
-        <section className="mt-8" id="about_me">
-          <H2 className="mb-4">{dict.about_me}</H2>
-
-          <div className="border-l-2 border-blue-50 pl-4 max-w-3xl">
-            <div>
-              <div className="relative">
-                <span className="absolute block w-[8px] h-[8px] ml-[-21px] top-0 bottom-0 my-auto bg-blue-700 rounded-full"></span>
-                <Large className="text-bold">
-                  {dict.elleve_fullstack_developer_title}
-                </Large>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Button asChild>
+                  <a href="#projects">{dict.view_projects}</a>
+                </Button>
+                <Button asChild variant="outline">
+                  <a href="#contact">{dict.contact_cta}</a>
+                </Button>
               </div>
-
-              <Muted className="text-sm">{dict.elleve_tenure}</Muted>
-
-              <Muted className="mt-4">{dict.elleve_description}</Muted>
-
-              <div className="flex flex-col gap-4 mt-2">
-                {(dict.elleve_responsabilties as string[]).map(
-                  (responsability, index) => (
-                    <P key={index}>{responsability}</P>
-                  )
-                )}
-              </div>
-
-              <P>{dict.main_tech_stack + ":"}</P>
-              <ul className="flex gap-2 mt-2 flex-wrap">
-                <li>
-                  <Badge>Next.js</Badge>
-                </li>
-                <li>
-                  <Badge>Tailwind CSS</Badge>
-                </li>
-                <li>
-                  <Badge>Shadcn</Badge>
-                </li>
-                <li>
-                  <Badge>NestJS</Badge>
-                </li>
-                <li>
-                  <Badge>Node.js</Badge>
-                </li>
-                <li>
-                  <Badge>TypeORM</Badge>
-                </li>
-                <li>
-                  <Badge>Python</Badge>
-                </li>
-                <li>
-                  <Badge>FastAPI</Badge>
-                </li>
-                <li>
-                  <Badge>PostgreSQL</Badge>
-                </li>
-              </ul>
-            </div>
-
-            <div className="mt-6">
-              <div className="relative">
-                <span className="absolute block w-[8px] h-[8px] ml-[-21px] top-0 bottom-0 my-auto bg-blue-700 rounded-full"></span>
-                <Large className="text-bold">{dict.rb_title}</Large>
-              </div>
-
-              <Muted>{dict.rb_tenure}</Muted>
-
-              <Muted className="mt-4">{dict.rb_description}</Muted>
-
-              <div className="flex flex-col gap-4 mt-2">
-                {(dict.rb_responsabilties as string[]).map(
-                  (responsability, index) => (
-                    <P key={index}>{responsability}</P>
-                  )
-                )}
-              </div>
-
-              <P>{dict.main_tech_stack + ":"}</P>
-              <ul className="flex gap-2 mt-2 flex-wrap">
-                <li>
-                  <Badge>Angular</Badge>
-                </li>
-                <li>
-                  <Badge>PrimeNG</Badge>
-                </li>
-                <li>
-                  <Badge>React</Badge>
-                </li>
-                <li>
-                  <Badge>Material UI/MUI</Badge>
-                </li>
-                <li>
-                  <Badge>Node.js</Badge>
-                </li>
-                <li>
-                  <Badge>NestJS</Badge>
-                </li>
-              </ul>
-            </div>
-
-            <div className="mt-6">
-              <div className="relative">
-                <span className="absolute block w-[8px] h-[8px] ml-[-21px] top-0 bottom-0 my-auto bg-blue-700 rounded-full"></span>
-                <Large className="text-bold">{dict.houpa_title}</Large>
-              </div>
-
-              <Muted>{dict.houpa_tenure}</Muted>
-
-              <Muted className="mt-4">{dict.houpa_description}</Muted>
-
-              <div className="flex flex-col gap-4 mt-2">
-                {(dict.houpa_responsabilties as string[]).map(
-                  (responsability, index) => (
-                    <P key={index}>{responsability}</P>
-                  )
-                )}
-              </div>
-
-              <P>{dict.main_tech_stack + ":"}</P>
-              <ul className="flex gap-2 mt-2 flex-wrap">
-                <li>
-                  <Badge>React</Badge>
-                </li>
-                <li>
-                  <Badge>Material UI/MUI</Badge>
-                </li>
-                <li>
-                  <Badge>NestJS</Badge>
-                </li>
-                <li>
-                  <Badge>Node.js</Badge>
-                </li>
-              </ul>
             </div>
           </div>
         </section>
 
-        <section className="mt-8 mb-[60px]" id="contact">
-          <H2 className="mb-4">{dict.contact}</H2>
-          <ItemGroup className="max-w-md">
-            <Item>
-              <ItemMedia>
-                <Mail />
-              </ItemMedia>
-              <ItemContent className="gap-1">
-                <ItemTitle>E-mail</ItemTitle>
-                <ItemDescription>gabriel.dev.front@gmail.com</ItemDescription>
-              </ItemContent>
-              <ItemActions>
-                <a href="mailto:gabriel.dev.front@gmail.com">
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    className="rounded-full cursor-pointer"
+        <section
+          id="projects"
+          className="max-w-6xl mx-auto px-4 scroll-mt-24 py-8"
+        >
+          <h2 className="text-3xl font-semibold tracking-tight">
+            {dict.projects}
+          </h2>
+
+          <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-2">
+            {projects.map((project) => (
+              <Card key={project.title} className="h-full">
+                <CardHeader>
+                  <CardTitle>{project.title}</CardTitle>
+                  <ExpandableText
+                  lines={3}
+                    moreLabel={dict.read_more}
+                    lessLabel={dict.read_less}
                   >
-                    <SquareArrowOutUpRight />
-                  </Button>
-                </a>
-              </ItemActions>
-            </Item>
+                    {project.description}
+                  </ExpandableText>
+                </CardHeader>
 
-            <ItemSeparator />
+                <CardContent className="grow">
+                  <div className="flex flex-wrap gap-2">
+                    {project.tags.map((tag) => (
+                      <Badge key={tag} variant="secondary">
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
+                </CardContent>
 
-            <Item>
-              <ItemMedia>
-                <Phone />
-              </ItemMedia>
-              <ItemContent className="gap-1">
-                <ItemTitle>WhatsApp</ItemTitle>
-                <ItemDescription>+55 11 94928 8027</ItemDescription>
-              </ItemContent>
-              <ItemActions>
-                <a href="https://wa.me/5511949288027" target="_blank">
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    className="rounded-full cursor-pointer"
+                <CardFooter className="mt-auto gap-4">
+                  <a
+                    className="inline-flex items-center gap-1 text-sm underline underline-offset-4"
+                    href={project.demo}
+                    target="_blank"
                   >
-                    <SquareArrowOutUpRight />
-                  </Button>
-                </a>
-              </ItemActions>
-            </Item>
-
-            <ItemSeparator />
-
-            <Item>
-              <ItemMedia>
-                <Linkedin />
-              </ItemMedia>
-              <ItemContent className="gap-1">
-                <ItemTitle>LinkedIn</ItemTitle>
-              </ItemContent>
-              <ItemActions>
-                <a
-                  href="https://www.linkedin.com/in/gabriel-barbosa-de-almeida-57b87b18a/"
-                  target="_blank"
-                >
-                  <Button variant="ghost" size="icon" className="rounded-full">
-                    <SquareArrowOutUpRight />
-                  </Button>
-                </a>
-              </ItemActions>
-            </Item>
-
-            <ItemSeparator />
-
-            <Item>
-              <ItemMedia>
-                <Github />
-              </ItemMedia>
-              <ItemContent className="gap-1">
-                <ItemTitle>GitHub</ItemTitle>
-              </ItemContent>
-              <ItemActions>
-                <a href="https://github.com/GabriellBarbosa" target="_blank">
-                  <Button variant="ghost" size="icon" className="rounded-full">
-                    <SquareArrowOutUpRight />
-                  </Button>
-                </a>
-              </ItemActions>
-            </Item>
-          </ItemGroup>
+                    {dict.live_project_link}
+                    <SquareArrowOutUpRight className="size-4" />
+                  </a>
+                  <a
+                    className="inline-flex items-center gap-1 text-sm underline underline-offset-4"
+                    href={project.github}
+                    target="_blank"
+                  >
+                    {dict.github_code_link}
+                    <SquareArrowOutUpRight className="size-4" />
+                  </a>
+                </CardFooter>
+              </Card>
+            ))}
+          </div>
         </section>
-      </div>
+        
+        <section
+          id="experience"
+          className="max-w-6xl mx-auto px-4 scroll-mt-24 py-8"
+        >
+          <h2 className="text-3xl font-semibold tracking-tight">
+            {dict.experience}
+          </h2>
+
+          <div className="mt-6 flex flex-col gap-5">
+            {experiences.map((experience) => (
+              <Card key={experience.role}>
+                <CardHeader>
+                  <CardTitle>{experience.role}</CardTitle>
+                  <CardDescription>{experience.period}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="list-disc space-y-2 pl-5 text-sm leading-6 text-muted-foreground">
+                    {experience.bullets.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        <section
+          id="tech-stack"
+          className="max-w-6xl mx-auto px-4 scroll-mt-24 py-8"
+        >
+          <h2 className="text-3xl font-semibold tracking-tight">
+            {dict.tech_stack}
+          </h2>
+
+          <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-2">
+            {techGroups.map((group) => (
+              <Card key={group.title}>
+                <CardHeader>
+                  <CardTitle>{group.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-2">
+                    {group.items.map((item) => (
+                      <Badge key={item}>{item}</Badge>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        <section
+          id="contact"
+          className="max-w-6xl mx-auto px-4 scroll-mt-24 py-8"
+        >
+          <h2 className="text-3xl font-semibold tracking-tight">
+            {dict.contact}
+          </h2>
+
+          <div className="mt-6 grid gap-3 sm:max-w-xl">
+            <a
+              className="inline-flex items-center justify-between rounded-lg border px-4 py-3"
+              href="mailto:gabriel.dev.front@gmail.com"
+            >
+              <span className="inline-flex items-center gap-2">
+                <Mail className="size-4" />
+                {dict.email_label}
+              </span>
+              <span className="text-sm text-muted-foreground">
+                gabriel.dev.front@gmail.com
+              </span>
+            </a>
+
+            <a
+              className="inline-flex items-center justify-between rounded-lg border px-4 py-3"
+              href="https://www.linkedin.com/in/gabriel-barbosa-de-almeida-57b87b18a/"
+              target="_blank"
+            >
+              <span className="inline-flex items-center gap-2">
+                <Linkedin className="size-4" />
+                LinkedIn
+              </span>
+              <SquareArrowOutUpRight className="size-4" />
+            </a>
+
+            <a
+              className="inline-flex items-center justify-between rounded-lg border px-4 py-3"
+              href="https://github.com/GabriellBarbosa"
+              target="_blank"
+            >
+              <span className="inline-flex items-center gap-2">
+                <Github className="size-4" />
+                GitHub
+              </span>
+              <SquareArrowOutUpRight className="size-4" />
+            </a>
+          </div>
+        </section>
+      </main>
     </div>
   );
 }

@@ -1,35 +1,76 @@
 {
   "title": "Portfolio do Gabriel",
-  "projects": "Projetos",
-  "about_me": "Sobre mim",
-  "contact": "Contato",
+  "hero_name": "Gabriel Barbosa",
   "full_stack_developer": "Desenvolvedor Full Stack",
+  "hero_short_bio": "Construo produtos web modernos da ideia à produção, com foco em impacto de negócio, escalabilidade e arquitetura limpa.",
+  "view_projects": "Ver projetos",
+  "contact_cta": "Contato",
+  "projects": "Projetos",
+  "about_me": "Sobre",
+  "experience": "Experiência",
+  "tech_stack": "Tecnologias",
+  "contact": "Contato",
+  "read_more": "Ler mais",
+  "read_less": "Ler menos",
+  "live_project_link": "Demo",
+  "github_code_link": "GitHub",
   "ai_cv_maker": "Gerador de currículo com IA",
-  "ai_cv_maker_description": "Adicione suas informações profissionais, cole a descrição da vaga, escolha o idioma ou tom de sua preferência e receba um currículo e uma carta de apresentação impecáveis ​em menos de um minuto.",
-  "tech_stack": "Tecnologias utilizadas",
-  "github_code_link": "Ver código no github",
-  "live_project_link": "Ver projeto online",
-  "clean_code_course": "Curso de código limpo",
-  "in_progress": "Em progresso",
-  "bookinvideo_description": "Resumo do livro código limpo onde eu apresento situações onde é possível aplicar os conceitos descritos no livro. Estou migrando a plataforma de WordPress para React e Node.",
+  "ai_cv_maker_description": "Insira suas informações profissionais, cole a descrição da vaga e selecione o idioma ou tom desejado. A aplicação analisa o contexto e gera automaticamente currículo e carta de apresentação personalizados para maximizar o alinhamento com a oportunidade.",
+  "clean_code_course": "Plataforma de cursos online",
+  "bookinvideo_description": "Idealização e desenvolvimento do BookInVideo, uma plataforma própria de cursos online. A primeira versão foi construída em WordPress para validação do produto. Atualmente estou reconstruindo a aplicação com Next.js e NestJS, com foco em escalabilidade, regras de negócio e performance.",
+  "about_summary": "Sou desenvolvedor full stack focado em construir produtos confiáveis que resolvem problemas reais. Trabalho próximo aos times de negócio e produto para entregar resultados rápidos, sustentáveis e mensuráveis.",
   "elleve_fullstack_developer_title": "Desenvolvedor Full Stack | Elleve",
-  "elleve_tenure": "fev de 2025 - nov de 2025 (10 meses)",
-  "elleve_description": "A Elleve é uma HR Tech e EdTech que facilita o acesso de colaboradores a cursos de instituições de ensino parceiras por meio de soluções financeiras.",
-  "responsabilities": "Responsabilidades",
+  "elleve_tenure": "fev de 2025 - nov de 2025",
   "elleve_responsabilties": [
-    "Atuei no desenvolvimento de sistemas internos e integrações financeiras, criando APIs escaláveis e interfaces em React para produtos utilizados por milhares de usuários."
+    "Atuei no desenvolvimento de fluxos financeiros internos e APIs de produto usadas por milhares de usuários.",
+    "Desenvolvi interfaces em React integradas a regras de negócio e fluxos de pagamento complexos.",
+    "Aumentei a manutenibilidade com melhor organização de módulos e menor acoplamento entre serviços."
   ],
-  "main_tech_stack": "Principais tecnologias utilizadas",
   "rb_title": "Desenvolvedor Front-End | R&B Rastreabilidade Brasil",
-  "rb_tenure": "dez de 2021 - out de 2023 (1 ano e 11 meses)",
-  "rb_description": "A R&B é uma startup de que oferece sistemas de rastreabilidade de produtos fazendo uso de etiquetas RFID (Radio-Frequency Identification).",
+  "rb_tenure": "dez de 2021 - out de 2023",
   "rb_responsabilties": [
-    "Desenvolvi uma aplicação web para criação de layouts de etiquetas diretamente no navegador, utilizando canvas. A solução reduziu o tempo de criação de etiquetas e melhorou significativamente a usabilidade para usuários não técnicos."
+    "Desenvolvi um editor de layouts de etiquetas no navegador usando canvas para operadores não técnicos.",
+    "Reduzi o tempo de configuração de etiquetas e aumentei a eficiência operacional no dia a dia.",
+    "Implementei componentes reutilizáveis que aceleraram a entrega de novas funcionalidades."
   ],
   "houpa_title": "Desenvolvedor Front-End | Houpa",
-  "houpa_tenure": "jan de 2021 - mai de 2021 (5 meses)",
-  "houpa_description": "O Houpa é uma plataforma b2c e b2b de compra e venda no setor de moda.",
+  "houpa_tenure": "jan de 2021 - mai de 2021",
   "houpa_responsabilties": [
-    "Desenvolvi componentes reutilizáveis em React para o projeto de e-commerce e pela criação de landing pages responsivas."
-  ]
+    "Desenvolvi componentes reutilizáveis em React para e-commerce e landing pages.",
+    "Entreguei interfaces responsivas com foco em conversão e experiência do usuário.",
+    "Colaborei com times de design e produto para entregar funcionalidades com rapidez."
+  ],
+  "frontend": "Frontend",
+  "backend": "Backend",
+  "database": "Banco de dados",
+  "infra_tools": "Infra/Tools",
+  "stack_frontend": [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "Shadcn/ui",
+    "Angular",
+    "Material UI"
+  ],
+  "stack_backend": [
+    "Node.js",
+    "NestJS",
+    "Python",
+    "FastAPI",
+    "APIs REST"
+  ],
+  "stack_database": [
+    "PostgreSQL",
+    "TypeORM",
+    "Prisma"
+  ],
+  "stack_infra_tools": [
+    "Docker",
+    "GitHub Actions",
+    "Vercel",
+    "GCP",
+    "Jest"
+  ],
+  "email_label": "E-mail"
 }
