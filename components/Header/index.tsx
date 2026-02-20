@@ -1,9 +1,8 @@
 import { Dict } from "@/templates/Home/dictionaries";
 import { SelectLanguage } from "../SelectLanguage";
 import { H3, P } from "../Typography";
-import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
-import { TableOfContents } from "lucide-react";
 import { useMemo } from "react";
+import { MobileMenu } from "../MobileMenu";
 
 interface Props {
   dict: Dict;
@@ -63,20 +62,9 @@ export function Header(props: Props) {
             ))}
           </nav>
 
-          <Sheet>
-            <SheetTrigger className="cursor-pointer sm:hidden">
-              <TableOfContents />
-            </SheetTrigger>
-            <SheetContent>
-              <nav className="pl-4 space-y-4">
-                {links.map(({ to, label }, index) => (
-                  <a className="block" href={to} key={index}>
-                    {label}
-                  </a>
-                ))}
-              </nav>
-            </SheetContent>
-          </Sheet>
+          <div className="sm:hidden">
+            <MobileMenu links={links} />
+          </div>
         </div>
       </div>
     </header>
