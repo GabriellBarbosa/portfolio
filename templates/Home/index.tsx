@@ -75,7 +75,7 @@ export default async function HomeTemplate(props: Props) {
         {
       role: dict.bookinvideo_title,
       period: dict.bookinvideo_tenure,
-      bullets: dict.bookinvideo_responsabilties,
+      bullets: dict.bookinvideo_responsibilities,
       company: "BookInVideo",
     },
     {

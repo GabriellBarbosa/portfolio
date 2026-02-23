@@ -42,7 +42,7 @@
   ],
   "bookinvideo_title": "Fundador & Desenvolvedor Full Stack",
   "bookinvideo_tenure": "nov de 2023 - dez de 2024",
-  "bookinvideo_responsabilties": [
+  "bookinvideo_responsibilities": [
     "Desenvolvimento de plataforma própria de cursos online com foco em organização arquitetural e experiência do usuário.",
     "Atuação full-stack, sendo responsável por modelagem de dados, autenticação, controle de progresso de aulas e integração entre front-end e back-end.",
     "Deploy e configuração de ambiente de produção"
