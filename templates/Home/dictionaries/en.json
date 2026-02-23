@@ -19,26 +19,33 @@
   "clean_code_course": "Online courses platform",
   "bookinvideo_description": "Conceived and developed BookInVideo, a proprietary online learning platform. The first version was built with WordPress to validate the product. I am rebuilding it with Next.js and NestJS focusing on scalability, business rules, and performance.",
   "about_summary": "I am a full stack developer focused on building reliable products that solve real problems. I work close to business and product teams to deliver fast, maintainable, and measurable outcomes.",
-  "elleve_fullstack_developer_title": "Full Stack Developer | Elleve",
+  "elleve_fullstack_developer_title": "Full Stack Developer",
   "elleve_tenure": "Feb 2025 - Nov 2025",
   "elleve_responsabilties": [
     "Built internal financial workflows and product APIs used by thousands of users.",
     "Developed React interfaces integrated with complex back-end rules and payment flows.",
     "Improved maintainability by structuring modules and reducing coupling between services."
   ],
-  "rb_title": "Front-End Developer | R&B Rastreabilidade Brasil",
+  "rb_title": "Front-end Developer ",
   "rb_tenure": "Dec 2021 - Oct 2023",
   "rb_responsabilties": [
     "Built a browser-based label layout editor using canvas for non-technical operators.",
     "Reduced label setup time and improved operational efficiency on shop-floor routines.",
     "Implemented reusable UI components that accelerated feature delivery."
   ],
-  "houpa_title": "Front-End Developer | Houpa",
+  "houpa_title": "Front-end Developer",
   "houpa_tenure": "Jan 2021 - May 2021",
   "houpa_responsabilties": [
     "Developed reusable React components for e-commerce and landing pages.",
     "Delivered responsive interfaces with strong focus on conversion and UX.",
     "Collaborated with design and product teams to ship features quickly."
+  ],
+  "bookinvideo_title": "Founder & Full Stack Developer",
+  "bookinvideo_tenure": "Nov 2023 - Dec 2024",
+  "bookinvideo_responsibilities": [
+    "Development of a proprietary online course platform focused on architectural organization and user experience.",
+    "Full-stack development, responsible for data modeling, authentication, lesson progress tracking, and front-end and back-end integration.",
+    "Deployment and production environment configuration."
   ],
   "frontend": "Frontend",
   "backend": "Backend",

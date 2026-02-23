@@ -10,7 +10,16 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { ExpandableText } from "@/components/ui/expandable-text";
-import { Github, Linkedin, Mail, SquareArrowOutUpRight } from "lucide-react";
+import {
+  Briefcase,
+  BriefcaseBusiness,
+  Calendar,
+  CalendarDays,
+  Github,
+  Linkedin,
+  Mail,
+  SquareArrowOutUpRight,
+} from "lucide-react";
 import { getDictionary, Languages } from "./dictionaries";
 
 interface Props {
@@ -61,16 +70,25 @@ export default async function HomeTemplate(props: Props) {
       role: dict.elleve_fullstack_developer_title,
       period: dict.elleve_tenure,
       bullets: dict.elleve_responsabilties,
+      company: "Elleve",
+    },
+        {
+      role: dict.bookinvideo_title,
+      period: dict.bookinvideo_tenure,
+      bullets: dict.bookinvideo_responsabilties,
+      company: "BookInVideo",
     },
     {
       role: dict.rb_title,
       period: dict.rb_tenure,
       bullets: dict.rb_responsabilties,
+      company: "R&B Rastreabilidade Brasil",
     },
     {
       role: dict.houpa_title,
       period: dict.houpa_tenure,
       bullets: dict.houpa_responsabilties,
+      company: "Houpa",
     },
   ];
 
@@ -89,7 +107,7 @@ export default async function HomeTemplate(props: Props) {
         <section id="hero">
           <div className="relative bg-zinc-50 overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-transparent to-cyan-500/10 pointer-events-none" />
-            <div className="max-w-6xl mx-auto relative z-10 py-24 px-4">
+            <div className="max-w-5xl mx-auto relative z-10 py-24 px-4">
               <p className="text-sm uppercase tracking-[0.16em] text-muted-foreground">
                 {dict.full_stack_developer}
               </p>
@@ -114,9 +132,9 @@ export default async function HomeTemplate(props: Props) {
 
         <section
           id="projects"
-          className="max-w-6xl mx-auto px-4 scroll-mt-24 py-8"
+          className="max-w-5xl mx-auto px-4 scroll-mt-24 py-8"
         >
-          <h2 className="text-3xl font-semibold tracking-tight">
+          <h2 className="text-3xl font-semibold tracking-tight text-center">
             {dict.projects}
           </h2>
 
@@ -126,7 +144,7 @@ export default async function HomeTemplate(props: Props) {
                 <CardHeader>
                   <CardTitle>{project.title}</CardTitle>
                   <ExpandableText
-                  lines={3}
+                    lines={3}
                     moreLabel={dict.read_more}
                     lessLabel={dict.read_less}
                   >
@@ -166,37 +184,55 @@ export default async function HomeTemplate(props: Props) {
             ))}
           </div>
         </section>
-        
+
         <section
           id="experience"
-          className="max-w-6xl mx-auto px-4 scroll-mt-24 py-8"
+          className="max-w-5xl mx-auto px-4 scroll-mt-24 py-8"
         >
-          <h2 className="text-3xl font-semibold tracking-tight">
+          <h2 className="text-3xl font-semibold tracking-tight text-center">
             {dict.experience}
           </h2>
 
-          <div className="mt-6 flex flex-col gap-5">
-            {experiences.map((experience) => (
-              <Card key={experience.role}>
-                <CardHeader>
-                  <CardTitle>{experience.role}</CardTitle>
-                  <CardDescription>{experience.period}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="list-disc space-y-2 pl-5 text-sm leading-6 text-muted-foreground">
-                    {experience.bullets.map((item) => (
-                      <li key={item}>{item}</li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+          <Card className="p-6 mt-6">
+            <div className="space-y-4">
+              {experiences.map((experience, index) => (
+                <div className="grid grid-cols-[auto_1fr] gap-2 overflow-hidden" key={index}>
+                  <div>
+                    <span className="block w-[6px] h-[6px] rounded-full bg-indigo-700 mt-3"></span>
+                    <span className="block w-[1px] h-full bg-indigo-200 mt-2 mx-auto"></span>
+                  </div>
+
+                  <div className="space-y-1">
+                    <p className="text-lg font-semibold">{experience.role}</p>
+                    <div className="flex items-center gap-2 text-muted-foreground ">
+                      <CalendarDays size={12} />
+                      <p className="text-xs text-muted-foreground">
+                        {experience.period}
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-2 text-muted-foreground">
+                      <BriefcaseBusiness size={12} />
+                      <p className="text-xs text-muted-foreground">
+                        {experience.company}
+                      </p>
+                    </div>
+                    <div>
+                      <ul className="space-y-2 text-sm">
+                        {experience.bullets.map((item) => (
+                          <li className="text-muted-foreground max-w-2xl"  key={item}>{item}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </Card>
         </section>
 
         <section
           id="tech-stack"
-          className="max-w-6xl mx-auto px-4 scroll-mt-24 py-8"
+          className="max-w-5xl mx-auto px-4 scroll-mt-24 py-8"
         >
           <h2 className="text-3xl font-semibold tracking-tight">
             {dict.tech_stack}
@@ -222,7 +258,7 @@ export default async function HomeTemplate(props: Props) {
 
         <section
           id="contact"
-          className="max-w-6xl mx-auto px-4 scroll-mt-24 py-8"
+          className="max-w-5xl mx-auto px-4 scroll-mt-24 py-8"
         >
           <h2 className="text-3xl font-semibold tracking-tight">
             {dict.contact}

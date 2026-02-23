@@ -19,26 +19,33 @@
   "clean_code_course": "Plataforma de cursos online",
   "bookinvideo_description": "Idealização e desenvolvimento do BookInVideo, uma plataforma própria de cursos online. A primeira versão foi construída em WordPress para validação do produto. Atualmente estou reconstruindo a aplicação com Next.js e NestJS, com foco em escalabilidade, regras de negócio e performance.",
   "about_summary": "Sou desenvolvedor full stack focado em construir produtos confiáveis que resolvem problemas reais. Trabalho próximo aos times de negócio e produto para entregar resultados rápidos, sustentáveis e mensuráveis.",
-  "elleve_fullstack_developer_title": "Desenvolvedor Full Stack | Elleve",
+  "elleve_fullstack_developer_title": "Desenvolvedor Full Stack",
   "elleve_tenure": "fev de 2025 - nov de 2025",
   "elleve_responsabilties": [
     "Atuei no desenvolvimento de fluxos financeiros internos e APIs de produto usadas por milhares de usuários.",
     "Desenvolvi interfaces em React integradas a regras de negócio e fluxos de pagamento complexos.",
     "Aumentei a manutenibilidade com melhor organização de módulos e menor acoplamento entre serviços."
   ],
-  "rb_title": "Desenvolvedor Front-End | R&B Rastreabilidade Brasil",
+  "rb_title": "Desenvolvedor Front-end ",
   "rb_tenure": "dez de 2021 - out de 2023",
   "rb_responsabilties": [
     "Desenvolvi um editor de layouts de etiquetas no navegador usando canvas para operadores não técnicos.",
     "Reduzi o tempo de configuração de etiquetas e aumentei a eficiência operacional no dia a dia.",
     "Implementei componentes reutilizáveis que aceleraram a entrega de novas funcionalidades."
   ],
-  "houpa_title": "Desenvolvedor Front-End | Houpa",
+  "houpa_title": "Desenvolvedor Front-end",
   "houpa_tenure": "jan de 2021 - mai de 2021",
   "houpa_responsabilties": [
     "Desenvolvi componentes reutilizáveis em React para e-commerce e landing pages.",
     "Entreguei interfaces responsivas com foco em conversão e experiência do usuário.",
     "Colaborei com times de design e produto para entregar funcionalidades com rapidez."
+  ],
+  "bookinvideo_title": "Fundador & Desenvolvedor Full Stack",
+  "bookinvideo_tenure": "nov de 2023 - dez de 2024",
+  "bookinvideo_responsabilties": [
+    "Desenvolvimento de plataforma própria de cursos online com foco em organização arquitetural e experiência do usuário.",
+    "Atuação full-stack, sendo responsável por modelagem de dados, autenticação, controle de progresso de aulas e integração entre front-end e back-end.",
+    "Deploy e configuração de ambiente de produção"
   ],
   "frontend": "Frontend",
   "backend": "Backend",
@@ -53,24 +60,8 @@
     "Angular",
     "Material UI"
   ],
-  "stack_backend": [
-    "Node.js",
-    "NestJS",
-    "Python",
-    "FastAPI",
-    "APIs REST"
-  ],
-  "stack_database": [
-    "PostgreSQL",
-    "TypeORM",
-    "Prisma"
-  ],
-  "stack_infra_tools": [
-    "Docker",
-    "GitHub Actions",
-    "Vercel",
-    "GCP",
-    "Jest"
-  ],
+  "stack_backend": ["Node.js", "NestJS", "Python", "FastAPI", "APIs REST"],
+  "stack_database": ["PostgreSQL", "TypeORM", "Prisma"],
+  "stack_infra_tools": ["Docker", "GitHub Actions", "Vercel", "GCP", "Jest"],
   "email_label": "E-mail"
 }

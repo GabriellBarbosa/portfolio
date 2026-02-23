@@ -36,15 +36,15 @@ export function Header(props: Props) {
 
   return (
     <header className="bg-white shadow-sm">
-      <div className="mx-auto max-w-6xl px-4 py-4">
+      <div className="mx-auto max-w-5xl px-4 py-4">
         <div className="mb-4 flex justify-center">
           <SelectLanguage lang={language} />
         </div>
 
         <div className="flex gap-4 items-center justify-between">
           <div className="flex items-center justify-center gap-3">
-            <div className="flex size-11 shrink-0 items-center justify-center rounded-md bg-gradient-to-br from-indigo-700 to-indigo-600 text-lg font-bold text-white shadow-sm">
-              G
+            <div className="flex size-11 shrink-0 items-center justify-center rounded-full bg-gray-900 text-lg font-bold text-white shadow-sm">
+              GB
             </div>
             <div>
               <P className="text-left text-xs uppercase tracking-[0.14em]">
