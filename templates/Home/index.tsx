@@ -30,6 +30,8 @@ export default async function HomeTemplate(props: Props) {
   const { language } = props;
   const dict = await getDictionary(language);
 
+  console.log('Olá mundo!')
+
   const projects = [
     {
       title: dict.ai_cv_maker,
