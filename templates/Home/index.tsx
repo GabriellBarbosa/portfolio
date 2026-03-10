@@ -4,16 +4,12 @@ import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { ExpandableText } from "@/components/ui/expandable-text";
 import {
-  Briefcase,
   BriefcaseBusiness,
-  Calendar,
   CalendarDays,
   Github,
   Linkedin,
@@ -29,8 +25,6 @@ interface Props {
 export default async function HomeTemplate(props: Props) {
   const { language } = props;
   const dict = await getDictionary(language);
-
-  console.log('Olá mundo!')
 
   const projects = [
     {
@@ -74,7 +68,7 @@ export default async function HomeTemplate(props: Props) {
       bullets: dict.elleve_responsabilties,
       company: "Elleve",
     },
-        {
+    {
       role: dict.bookinvideo_title,
       period: dict.bookinvideo_tenure,
       bullets: dict.bookinvideo_responsibilities,
@@ -109,7 +103,7 @@ export default async function HomeTemplate(props: Props) {
         <section id="hero">
           <div className="relative bg-zinc-50 overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-transparent to-cyan-500/10 pointer-events-none" />
-            <div className="max-w-5xl mx-auto relative z-10 py-24 px-4">
+            <div className="max-w-5xl mx-auto relative z-10 py-30 px-4">
               <p className="text-sm uppercase tracking-[0.16em] text-muted-foreground">
                 {dict.full_stack_developer}
               </p>
@@ -145,13 +139,7 @@ export default async function HomeTemplate(props: Props) {
               <Card key={project.title} className="h-full">
                 <CardHeader>
                   <CardTitle>{project.title}</CardTitle>
-                  <ExpandableText
-                    lines={3}
-                    moreLabel={dict.read_more}
-                    lessLabel={dict.read_less}
-                  >
-                    {project.description}
-                  </ExpandableText>
+                  <p className={`text-zinc-600`}>{project.description}</p>
                 </CardHeader>
 
                 <CardContent className="grow">
@@ -198,7 +186,10 @@ export default async function HomeTemplate(props: Props) {
           <Card className="p-6 mt-6">
             <div className="space-y-4">
               {experiences.map((experience, index) => (
-                <div className="grid grid-cols-[auto_1fr] gap-2 overflow-hidden" key={index}>
+                <div
+                  className="grid grid-cols-[auto_1fr] gap-2 overflow-hidden"
+                  key={index}
+                >
                   <div>
                     <span className="block w-[6px] h-[6px] rounded-full bg-indigo-700 mt-3"></span>
                     <span className="block w-[1px] h-full bg-indigo-200 mt-2 mx-auto"></span>
@@ -221,7 +212,12 @@ export default async function HomeTemplate(props: Props) {
                     <div>
                       <ul className="space-y-2 text-sm">
                         {experience.bullets.map((item) => (
-                          <li className="text-muted-foreground max-w-2xl"  key={item}>{item}</li>
+                          <li
+                            className="text-muted-foreground max-w-2xl"
+                            key={item}
+                          >
+                            {item}
+                          </li>
                         ))}
                       </ul>
                     </div>
@@ -236,7 +232,7 @@ export default async function HomeTemplate(props: Props) {
           id="tech-stack"
           className="max-w-5xl mx-auto px-4 scroll-mt-24 py-8"
         >
-          <h2 className="text-3xl font-semibold tracking-tight">
+          <h2 className="text-3xl font-semibold tracking-tight text-center">
             {dict.tech_stack}
           </h2>
 
@@ -262,11 +258,11 @@ export default async function HomeTemplate(props: Props) {
           id="contact"
           className="max-w-5xl mx-auto px-4 scroll-mt-24 py-8"
         >
-          <h2 className="text-3xl font-semibold tracking-tight">
+          <h2 className="text-3xl font-semibold tracking-tight text-center">
             {dict.contact}
           </h2>
 
-          <div className="mt-6 grid gap-3 sm:max-w-xl">
+          <div className="mt-6 grid gap-3 sm:max-w-xl mx-auto">
             <a
               className="inline-flex items-center justify-between rounded-lg border px-4 py-3"
               href="mailto:gabriel.dev.front@gmail.com"

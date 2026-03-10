@@ -43,7 +43,7 @@ export function Header(props: Props) {
 
         <div className="flex gap-4 items-center justify-between">
           <div className="flex items-center justify-center gap-3">
-            <div className="flex size-11 shrink-0 items-center justify-center rounded-full bg-gray-900 text-lg font-bold text-white shadow-sm">
+            <div className="flex size-11 shrink-0 items-center justify-center rounded-lg bg-gray-900 text-lg font-bold text-white shadow-sm">
               GB
             </div>
             <div>

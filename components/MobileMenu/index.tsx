@@ -29,7 +29,7 @@ export function MobileMenu({
         side="right"
         onCloseAutoFocus={(e) => e.preventDefault()}
       >
-        <SheetTitle>Seções da página</SheetTitle>
+        <SheetTitle>Sections</SheetTitle>
 
         {links.map(({ to, label }, index) => (
           <SheetClose asChild key={index}>

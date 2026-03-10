@@ -47,7 +47,7 @@
     "Atuação full-stack, sendo responsável por modelagem de dados, autenticação, controle de progresso de aulas e integração entre front-end e back-end.",
     "Deploy e configuração de ambiente de produção"
   ],
-  "frontend": "Frontend",
+  "frontend": "Front-End",
   "backend": "Backend",
   "database": "Banco de dados",
   "infra_tools": "Infra/Tools",
