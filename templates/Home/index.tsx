@@ -34,7 +34,7 @@ export default function HomeTemplate() {
     aiCvMakerTitle: "Resume generator with AI",
     aiCvMakerDescription:
       "Enter your professional information, paste the job description, and choose your preferred language or tone. The app analyzes the context and automatically generates a tailored resume and cover letter optimized for the opportunity.",
-    cleanCodeCourseTitle: "BookInVideo - Online courses platform",
+    cleanCodeCourseTitle: "Online courses platform (BookInVideo)",
     bookinvideoDescription:
       "Conceived and developed BookInVideo, a proprietary online learning platform. The first version was built with WordPress to validate the product. I am rebuilding it with Next.js and NestJS focusing on scalability, business rules, and performance.",
     frontend: "Frontend",
@@ -147,7 +147,7 @@ export default function HomeTemplate() {
       <main>
         <section id="hero">
           <div className="relative bg-background overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 via-transparent to-cyan-500/20 pointer-events-none" />
+            <div className="absolute inset-0 bg-fixed bg-gradient-to-br from-indigo-500/20 via-transparent to-cyan-500/20 pointer-events-none" />
             <div className="max-w-5xl mx-auto relative z-10 py-30 px-4">
               <p className="text-sm uppercase tracking-[0.16em] text-muted-foreground">
                 {copy.role}
@@ -239,7 +239,7 @@ export default function HomeTemplate() {
             <div className="relative space-y-5 pl-8 before:absolute before:bottom-3 before:left-[0.55rem] before:top-3 before:w-px before:bg-border">
               {experiences.map((experience, index) => (
                 <Card className="relative rounded-2xl border" key={index}>
-                  <span className="absolute -left-[30px] top-6 block size-3 rounded-full border-2 border-indigo-300 bg-background" />
+                  <span className="absolute -left-[30px] top-6 block size-3 rounded-full bg-gradient-to-r from-indigo-500 via-cyan-400 to-emerald-400 opacity-80" />
 
                   <CardHeader className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
                     <div className="space-y-1">
@@ -302,9 +302,10 @@ export default function HomeTemplate() {
                   <CardTitle className="text-left text-lg">
                     {group.title}
                   </CardTitle>
+                  <div className="mt-1 h-[3px] w-[30px] rounded-full bg-gradient-to-r from-indigo-500 via-cyan-400 to-emerald-400 opacity-80" />
                 </CardHeader>
                 <CardFooter>
-                  <div className="flex gap-4 flex-wrap sm:flex-col">
+                  <div className="flex gap-4 flex-col flex-wrap max-w-full sm:max-w-lg">
                     {group.items.map((item) => (
                       <Badge
                         key={item}
@@ -321,15 +322,18 @@ export default function HomeTemplate() {
           </div>
         </section>
 
-        <section
-          id="contact"
-          className="max-w-5xl mx-auto px-4 scroll-mt-24 py-8"
-        >
-          <h2 className="text-3xl font-semibold tracking-tight text-center">
-            {copy.contact}
-          </h2>
+	        <section
+	          id="contact"
+	          className="max-w-5xl mx-auto px-4 scroll-mt-24 py-8"
+	        >
+	          <h2 className="text-3xl font-semibold tracking-tight text-center">
+	            {copy.contact}
+	          </h2>
+	          <p className="mt-2 text-sm text-muted-foreground text-center">
+	            Let&apos;s connect and build something meaningful together.
+	          </p>
 
-          <div className="mt-6 grid gap-3 sm:max-w-xl mx-auto">
+	          <div className="mt-6 grid gap-3 sm:max-w-xl mx-auto">
             <a
               className="inline-flex items-center justify-between rounded-lg border px-4 py-3"
               href="mailto:gabriel.dev.front@gmail.com"
