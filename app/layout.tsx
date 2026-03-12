@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "../globals.css";
+import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,7 +14,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Portfolio - Gabriel Barbosa",
-  description: "The projects built by Gabriel Barbosa. A developer that loves to create usefull things that makes life easier.",
+  description:
+    "The projects built by Gabriel Barbosa. A developer that loves to create usefull things that makes life easier.",
 };
 
 export default function RootLayout({
@@ -23,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

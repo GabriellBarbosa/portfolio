@@ -25,7 +25,7 @@ export function MobileMenu({
       </SheetTrigger>
 
       <SheetContent
-        className="pl-4 space-y-4 pt-[20px] text-xl w-72 bg-white text-zinc-900"
+        className="pl-4 space-y-4 pt-[20px] text-xl w-72 bg-background text-foreground"
         side="right"
         onCloseAutoFocus={(e) => e.preventDefault()}
       >

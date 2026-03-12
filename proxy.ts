@@ -6,14 +6,15 @@ export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   const pathnameHasLocale = locales.some(
-    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
+    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`,
   );
 
-  if (pathnameHasLocale) return;
+  if (pathnameHasLocale) {
+    request.nextUrl.pathname = `/${pathname}`;
+    return NextResponse.redirect(request.nextUrl);
+  }
 
-  request.nextUrl.pathname = `/${defaultLocale}${pathname}`;
-
-  return NextResponse.redirect(request.nextUrl);
+  return;
 }
 
 export const config = {

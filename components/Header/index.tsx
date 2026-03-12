@@ -1,56 +1,40 @@
-import { Dict } from "@/templates/Home/dictionaries";
-import { SelectLanguage } from "../SelectLanguage";
 import { H3, P } from "../Typography";
 import { useMemo } from "react";
 import { MobileMenu } from "../MobileMenu";
 
-interface Props {
-  dict: Dict;
-  language: string;
-}
-
-export function Header(props: Props) {
-  const { dict, language } = props;
-
+export function Header() {
   const links = useMemo(
     () => [
       {
         to: "#projects",
-        label: dict.projects,
+        label: "Projects",
       },
       {
         to: "#experience",
-        label: dict.experience,
+        label: "Experience",
       },
       {
         to: "#tech-stack",
-        label: dict.tech_stack,
+        label: "Tech Stack",
       },
       {
         to: "#contact",
-        label: dict.contact,
+        label: "Contact me",
       },
     ],
-    [dict],
+    [],
   );
 
   return (
-    <header className="bg-white shadow-sm">
+    <header className="bg-background/95 border-b">
       <div className="mx-auto max-w-5xl px-4 py-4">
-        <div className="mb-4 flex justify-center">
-          <SelectLanguage lang={language} />
-        </div>
-
         <div className="flex gap-4 items-center justify-between">
           <div className="flex items-center justify-center gap-3">
-            <div className="flex size-11 shrink-0 items-center justify-center rounded-lg bg-gray-900 text-lg font-bold text-white shadow-sm">
-              GB
-            </div>
             <div>
               <P className="text-left text-xs uppercase tracking-[0.14em]">
                 Gabriel Barbosa
               </P>
-              <H3 className="text-lg">{dict.full_stack_developer}</H3>
+              <H3 className="text-lg">Full Stack Engineer</H3>
             </div>
           </div>
 
