@@ -19,7 +19,7 @@ import {
 export default function HomeTemplate() {
   const copy = {
     heroName: "Gabriel Barbosa",
-    role: "Full Stack Engineer",
+    role: "Full Stack Developer",
     heroShortBio:
       "I build modern web products from idea to production, with focus on business impact, scalability, and clean architecture.",
     viewProjects: "View projects",
@@ -80,7 +80,7 @@ export default function HomeTemplate() {
 
   const experiences = [
     {
-      role: "Full Stack Engineer",
+      role: "Full Stack Developer",
       period: "Feb 2025 - Nov 2025",
       bullets: [
         "Built internal financial workflows and product APIs used by thousands of users.",
@@ -90,7 +90,7 @@ export default function HomeTemplate() {
       company: "Elleve",
     },
     {
-      role: "Founder & Full Stack Engineer",
+      role: "Founder & Full Stack Developer",
       period: "Nov 2023 - Dec 2024",
       bullets: [
         "Development of a proprietary online course platform focused on architectural organization and user experience.",

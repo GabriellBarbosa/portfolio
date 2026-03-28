@@ -34,7 +34,7 @@ export function Header() {
               <P className="text-left text-xs uppercase tracking-[0.14em]">
                 Gabriel Barbosa
               </P>
-              <H3 className="text-lg">Full Stack Engineer</H3>
+              <H3 className="text-lg">Full Stack Developer</H3>
             </div>
           </div>
 
